@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="w-full h-screen grid grid-cols-2 items-center gap-32">
+    <div className="w-full h-screen grid grid-cols-2 items-center gap-32 px-20">
       <div className="place-self-center">
         <h2 className="text-5xl">Hello, I'm</h2>
         <h1 className="text-7xl font-bold">Yunseok Hong</h1>

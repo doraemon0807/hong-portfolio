@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <div className="w-full min-h-screen pt-20">
+    <div className="w-full min-h-screen py-20">
       <div className="flex flex-col items-center">
         <h1 className="title mb-24">Projects</h1>
         <div className="grid grid-cols-3 gap-20">

@@ -6,7 +6,7 @@ export default function About() {
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full grid grid-cols-2 gap-20">
           <div className="flex justify-between flex-col">
-            <h1 className="title mb-24">About Me</h1>
+            <h1 className="title">About Me</h1>
             <div className="flex flex-col space-y-10 tracking-widest text-lg">
               <h3>I was born in Seoul</h3>
               <h3>I am fluent in English</h3>
