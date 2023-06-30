@@ -1,8 +1,16 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import Layout from "@/components/layout";
+import About from "@/pages/about";
+import Contact from "@/pages/contact";
+import Home from "@/pages/home";
+import Projects from "@/pages/project";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
-  return <div>Hello</div>;
+export default function Index() {
+  return (
+    <Layout seoTitle="Home">
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </Layout>
+  );
 }
