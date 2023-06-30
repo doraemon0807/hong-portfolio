@@ -1,3 +1,5 @@
+import Timeline from "@/components/timeline";
+
 export default function About() {
   return (
     <div className="w-full h-screen px-40">
@@ -15,50 +17,30 @@ export default function About() {
           <div className="w-full flex h-full mt-10">
             <div className="border-l-2 my-4 border-gray-500 border-dotted">
               <div className="flex flex-col space-y-16 -translate-x-[9px]">
-                <div className="flex items-center space-x-10 relative">
-                  <div className="w-4 h-4 rounded-full ring-dark ring-4 bg-dark ring-offset-2 ring-offset-gray-200 hover:bg-gray-200 transition-all cursor-pointer"></div>
-                  <div className="flex flex-col">
-                    <h4>Localization QA Release Manager</h4>
-                  </div>
-                  <div className="absolute -left-32 text-sm text-gray-300 flex flex-col items-center">
-                    <h6>Present</h6>
-                    <h6>ㅣ</h6>
-                    <h6>2021-08</h6>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-10">
-                  <div className="w-4 h-4 rounded-full ring-dark ring-4 bg-dark ring-offset-2 ring-offset-gray-200 hover:bg-gray-200 transition-all cursor-pointer"></div>
-                  <div className="flex flex-col">
-                    <h4>Localization QA Test Lead</h4>
-                  </div>
-                  <div className="absolute -left-32 text-sm text-gray-300 flex flex-col items-center">
-                    <h6>2021-08</h6>
-                    <h6>ㅣ</h6>
-                    <h6>2016-11</h6>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-10">
-                  <div className="w-4 h-4 rounded-full ring-dark ring-4 bg-dark ring-offset-2 ring-offset-gray-200 hover:bg-gray-200 transition-all cursor-pointer"></div>
-                  <div className="flex flex-col">
-                    <h4>Localization QA Korean Tester</h4>
-                  </div>
-                  <div className="absolute -left-32 text-sm text-gray-300 flex flex-col items-center">
-                    <h6>2016-11</h6>
-                    <h6>ㅣ</h6>
-                    <h6>2015-05</h6>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-10">
-                  <div className="w-4 h-4 rounded-full ring-dark ring-4 bg-dark ring-offset-2 ring-offset-gray-200 hover:bg-gray-200 transition-all cursor-pointer"></div>
-                  <div className="flex flex-col">
-                    <h4>Graduated McGill University</h4>
-                  </div>
-                  <div className="absolute -left-32 text-sm text-gray-300 flex flex-col items-center">
-                    <h6>2014-05</h6>
-                    <h6>ㅣ</h6>
-                    <h6>2010-09</h6>
-                  </div>
-                </div>
+                <Timeline
+                  title="Localization QA Release Manager"
+                  subtitle="at Keywords Studios Montreal"
+                  startTime="2021-08"
+                  endTime="Present"
+                />
+                <Timeline
+                  title="Localization QA Test Lead"
+                  subtitle="at Keywords Studios Montreal"
+                  startTime="2016-11"
+                  endTime="2021-08"
+                />
+                <Timeline
+                  title="Localization QA Korean Tester"
+                  subtitle="at Keywords Studios Montreal"
+                  startTime="2015-05"
+                  endTime="2016-11"
+                />
+                <Timeline
+                  title="Graduated McGill University"
+                  subtitle="Majored in Mechanical Engineering"
+                  startTime="2010-09"
+                  endTime="2014-05"
+                />
               </div>
             </div>
           </div>
