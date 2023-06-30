@@ -6,7 +6,7 @@ import Projects from "@/pages/project";
 
 export default function Index() {
   return (
-    <Layout seoTitle="Home">
+    <Layout>
       <Home />
       <About />
       <Projects />
