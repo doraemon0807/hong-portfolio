@@ -1,4 +1,5 @@
 import Timeline from "@/components/timeline";
+import Typewriter from "typewriter-effect";
 
 export default function About() {
   return (
@@ -8,10 +9,57 @@ export default function About() {
           <div className="flex justify-around flex-col">
             <h1 className="title">About Me</h1>
             <div className="flex flex-col space-y-10 tracking-widest text-lg">
-              <h3>I was born in Seoul</h3>
-              <h3>I am fluent in English</h3>
-              <h3>I excel at problem solving</h3>
-              <h3>I I love video games</h3>
+              <div className="flex">
+                <span>I</span>
+                <Typewriter
+                  options={{
+                    strings: [
+                      " was born in Seoul",
+                      " currently live in Montreal",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </div>
+              <div className="flex">
+                <span>I am fluent in</span>
+                <Typewriter
+                  options={{
+                    strings: [" English", " French", " Korean"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </div>
+              <div className="flex">
+                <span>I excel at</span>
+                <Typewriter
+                  options={{
+                    strings: [
+                      " problem solving",
+                      " leadership",
+                      " task management",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </div>
+              <div className="flex">
+                <span>I love</span>
+                <Typewriter
+                  options={{
+                    strings: [
+                      " video games",
+                      " cats and dogs",
+                      " playing guitar",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="w-full flex h-full mt-10">
