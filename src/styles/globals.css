@@ -12,3 +12,10 @@
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+
+.lg-1 {
+  background: linear-gradient(to right, #ff7c7a, #66c4ff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
