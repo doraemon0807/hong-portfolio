@@ -10,7 +10,10 @@ module.exports = {
       colors: {
         dark: "#0e0e0f",
       },
+      animation: {
+        swapWordAnimation: "swapWords 9s ease-in-out infinite",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animation-delay")],
 };

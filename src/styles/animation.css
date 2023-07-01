@@ -1,0 +1,16 @@
+@keyframes swapWords {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  7%,
+  24% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  43%,
+  100% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+}
