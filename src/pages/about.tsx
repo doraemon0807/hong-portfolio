@@ -1,6 +1,5 @@
 import Timeline from "@/components/timeline";
 import Typewriter from "typewriter-effect";
-import { useState, useEffect } from "react";
 
 export default function About() {
   return (
