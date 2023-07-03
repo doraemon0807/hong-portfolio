@@ -1,7 +1,8 @@
 import ProjectDetail from "@/components/projectDetail";
 import { projectList } from "@/lib/projectList";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import disableScroll from "disable-scroll";
 
 export default function Projects() {
   const [id, setId] = useState<null | string>(null);
@@ -11,12 +12,16 @@ export default function Projects() {
       backgroundColor: "rgba(0,0,0,0)",
     },
     animate: {
-      backgroundColor: "rgba(0,0,0,0.7)",
+      backgroundColor: "rgba(0,0,0,0.6)",
     },
     exit: {
       backgroundColor: "rgba(0,0,0,0)",
     },
   };
+
+  useEffect(() => {
+    id ? disableScroll.on() : disableScroll.off();
+  }, [id]);
 
   return (
     <div className="w-full min-h-screen py-20 select-none">
@@ -42,7 +47,7 @@ export default function Projects() {
               animate={"animate"}
               exit={"exit"}
               variants={overlayVariants}
-              className="w-screen h-full absolute"
+              className="w-screen h-[200%] absolute"
             >
               <ProjectDetail id={id} />
             </motion.div>
