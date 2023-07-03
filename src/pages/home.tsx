@@ -23,6 +23,7 @@ export default function Home() {
           <span className="translate-x-[114px]"> Developer Wannabe</span>
         </div>
       </div>
+      {/* TagCloud */}
       <div className="place-self-center">
         <TagCloud
           className="text-2xl select-none"

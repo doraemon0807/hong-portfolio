@@ -19,3 +19,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.Typewriter__wrapper {
+  background: linear-gradient(to right, #ff7c7a, #66c4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
