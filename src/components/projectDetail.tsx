@@ -31,21 +31,24 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
   return (
     <motion.div
       layoutId={id}
-      className="w-4/5 h-3/4 bg-dark shadow-md shadow-gray-700 fixed left-0 right-0 top-0 bottom-0 m-auto rounded-md p-5 grid grid-cols-[4fr_3fr]"
+      className="w-4/5 h-3/4 bg-dark border-2 border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-0 bottom-0 m-auto rounded-md p-5 grid grid-cols-[6fr_3fr]"
     >
       {/* Images */}
       <div className="grid grid-rows-[7fr_1fr] ">
         <div className="relative">
           {selectedProject?.images.map((image, idx) => (
-            <div
+            <Image
+              alt=""
+              src={`/projects/${image}`}
               key={image}
+              width={1000}
+              height={1000}
+              quality={100}
               className={cls(
-                "rounded-sm absolute w-full h-full bg-blue-600 flex justify-center items-center transition-all",
+                "rounded-sm absolute w-full h-full flex justify-center items-center transition-all duration-1000",
                 counter - 1 === idx ? "opacity-1" : "opacity-0"
               )}
-            >
-              <span>{image + counter}</span>
-            </div>
+            ></Image>
           ))}
         </div>
         <div className="flex justify-center space-x-10 mt-4">

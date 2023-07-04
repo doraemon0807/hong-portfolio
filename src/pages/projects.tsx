@@ -3,6 +3,7 @@ import { projectList } from "@/lib/projectList";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import disableScroll from "disable-scroll";
+import ProjectThumb from "@/components/projectThumb";
 
 export default function Projects() {
   const [id, setId] = useState<null | string>(null);
@@ -29,28 +30,22 @@ export default function Projects() {
         <h1 className="title mb-24">Projects</h1>
         <div className="grid grid-cols-3 gap-20">
           {projectList.map((project) => (
-            <motion.div
-              key={project.id}
-              onClick={() => setId(project.id)}
-              layoutId={project.id}
-              className="w-60 h-80 bg-red-900 rounded-md"
-            >
-              {project.title}
-            </motion.div>
+            <ProjectThumb project={project} setId={setId} />
           ))}
         </div>
         <AnimatePresence>
           {id ? (
-            <motion.div
-              onClick={() => setId(null)}
-              initial={"initial"}
-              animate={"animate"}
-              exit={"exit"}
-              variants={overlayVariants}
-              className="w-screen h-[200%] absolute"
-            >
+            <>
+              <motion.div
+                onClick={() => setId(null)}
+                initial={"initial"}
+                animate={"animate"}
+                exit={"exit"}
+                variants={overlayVariants}
+                className="w-screen h-[200%] absolute"
+              ></motion.div>
               <ProjectDetail id={id} />
-            </motion.div>
+            </>
           ) : null}
         </AnimatePresence>
       </div>
