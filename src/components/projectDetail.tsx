@@ -34,7 +34,7 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
       className="w-4/5 h-3/4 bg-dark border-2 border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-0 bottom-0 m-auto rounded-md p-5 grid grid-cols-[6fr_3fr]"
     >
       {/* Images */}
-      <div className="grid grid-rows-[7fr_1fr] ">
+      <div className="grid grid-rows-[11fr_1fr] ">
         <div className="relative">
           {selectedProject?.images.map((image, idx) => (
             <Image
