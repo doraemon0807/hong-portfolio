@@ -24,13 +24,19 @@ export default function Projects() {
     id ? disableScroll.on() : disableScroll.off();
   }, [id]);
 
+  useEffect(() => {
+    document.addEventListener("keydown", (e: KeyboardEvent) => {
+      e.key === "Escape" ? setId(null) : null;
+    });
+  }, []);
+
   return (
     <div className="w-full min-h-screen py-20 select-none">
       <div className="flex flex-col items-center relative">
         <h1 className="title mb-24">Projects</h1>
         <div className="grid grid-cols-3 gap-20">
           {projectList.map((project) => (
-            <ProjectThumb project={project} setId={setId} />
+            <ProjectThumb project={project} setId={setId} key={project.id} />
           ))}
         </div>
         <AnimatePresence>
