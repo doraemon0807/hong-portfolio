@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark: "#0e0e0f",
+        dark: "#0e0e0e",
       },
       animation: {
         swapWordAnimation: "swapWords 9s ease-in-out infinite",

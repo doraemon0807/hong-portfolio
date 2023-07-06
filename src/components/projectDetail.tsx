@@ -74,7 +74,7 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
         </div>
         <div className="flex flex-col h-full py-4 justify-evenly">
           <div className="">
-            <h5 className="mb-2 text-gray-300 tracking-[3px] uppercase text-sm">
+            <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
               Feature
             </h5>
             <div className="flex flex-col">
@@ -84,7 +84,7 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
             </div>
           </div>
           <div className="flex flex-col">
-            <h5 className="mb-2 text-gray-300 tracking-[3px] uppercase text-sm">
+            <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
               Package
             </h5>
             <div className="flex space-x-4">
@@ -101,7 +101,7 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
             </div>
           </div>
           <div>
-            <h5 className="mb-2 text-gray-300 tracking-[3px] uppercase text-sm">
+            <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
               Deployment
             </h5>
             {selectedProject?.deployments.map((deployment) => (
