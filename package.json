@@ -22,11 +22,15 @@
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-scroll": "^1.8.9",
     "react-tooltip": "^5.18.0",
     "recoil": "^0.7.7",
     "tailwindcss": "3.3.2",
     "tailwindcss-animation-delay": "^1.0.7",
     "typescript": "5.1.6",
     "typewriter-effect": "^2.20.1"
+  },
+  "devDependencies": {
+    "@types/react-scroll": "^1.8.7"
   }
 }

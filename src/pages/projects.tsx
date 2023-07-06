@@ -31,9 +31,11 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen py-20 select-none">
+    <div id="projectsNav" className="w-full min-h-screen py-20 select-none">
       <div className="flex flex-col items-center relative">
-        <h1 className="title mb-24">Projects</h1>
+        <h1 id="projects" className="title mb-24">
+          Projects
+        </h1>
         <div className="grid grid-cols-3 gap-20">
           {projectList.map((project) => (
             <ProjectThumb project={project} setId={setId} key={project.id} />

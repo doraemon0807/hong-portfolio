@@ -3,7 +3,10 @@ import { TagCloudOptions } from "TagCloud";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen grid grid-cols-2 items-center gap-x-0.5 px-20 select-none">
+    <div
+      id="home"
+      className="w-full h-screen grid grid-cols-2 items-center gap-x-0.5 px-20 select-none"
+    >
       <div className="place-self-center tracking-widest">
         <h2 className="text-5xl">Hello, I'm</h2>
         <h1 className="text-7xl font-bold mt-5">Yunseok Hong</h1>
