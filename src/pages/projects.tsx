@@ -33,7 +33,7 @@ export default function Projects() {
   return (
     <div id="projectsNav" className="w-full min-h-screen py-20 select-none">
       <div className="flex flex-col items-center relative">
-        <h1 id="projects" className="title mb-24">
+        <h1 id="projectsAnchor" className="title mb-24">
           Projects
         </h1>
         <div className="grid grid-cols-3 gap-20">

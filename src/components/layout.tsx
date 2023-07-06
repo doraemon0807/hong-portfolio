@@ -34,20 +34,19 @@ export default function Layout({ children }: LayoutProps) {
 
   useEffect(() => {
     const observer = new IntersectionObserver((e) => {
-      console.log(e[0]);
       if (e[0].isIntersecting) {
         setNavLocation(e[0].target.id);
       }
     });
-    const home = document.getElementById("home");
-    const about = document.getElementById("about");
-    const projects = document.getElementById("projects");
-    const contact = document.getElementById("contact");
+    const homeAnchor = document.getElementById("homeAnchor");
+    const aboutAnchor = document.getElementById("aboutAnchor");
+    const projectsAnchor = document.getElementById("projectsAnchor");
+    const contactAnchor = document.getElementById("contactAnchor");
 
-    home ? observer.observe(home) : null;
-    about ? observer.observe(about) : null;
-    projects ? observer.observe(projects) : null;
-    contact ? observer.observe(contact) : null;
+    homeAnchor ? observer.observe(homeAnchor) : null;
+    aboutAnchor ? observer.observe(aboutAnchor) : null;
+    projectsAnchor ? observer.observe(projectsAnchor) : null;
+    contactAnchor ? observer.observe(contactAnchor) : null;
   }, []);
 
   return (
@@ -67,14 +66,17 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex flex-col items-center space-y-2">
             <Link
               className="cursor-pointer"
-              to="home"
+              to="homeNav"
               smooth={true}
               duration={500}
             >
               Home
             </Link>
-            {navLocation === "home" ? (
-              <div className="w-full min-h-[2px] -translate-x-[2px] bg-white/75" />
+            {navLocation === "homeAnchor" ? (
+              <motion.div
+                layoutId="underbar"
+                className="w-full min-h-[2px] mr-[3px] bg-white/75"
+              />
             ) : null}
           </div>
           <div className="flex flex-col items-center space-y-2">
@@ -86,8 +88,11 @@ export default function Layout({ children }: LayoutProps) {
             >
               About
             </Link>
-            {navLocation === "about" ? (
-              <div className="w-full min-h-[2px] -translate-x-[2px] bg-white/75" />
+            {navLocation === "aboutAnchor" ? (
+              <motion.div
+                layoutId="underbar"
+                className="w-full min-h-[2px] mr-[3px] bg-white/75"
+              />
             ) : null}
           </div>
           <div className="flex flex-col items-center space-y-2">
@@ -100,8 +105,11 @@ export default function Layout({ children }: LayoutProps) {
             >
               Projects
             </Link>
-            {navLocation === "projects" ? (
-              <div className="w-full min-h-[2px] -translate-x-[2px] bg-white/75" />
+            {navLocation === "projectsAnchor" ? (
+              <motion.div
+                layoutId="underbar"
+                className="w-full min-h-[2px] mr-[3px] bg-white/75"
+              />
             ) : null}
           </div>
           <div className="flex flex-col items-center space-y-2">
@@ -113,8 +121,11 @@ export default function Layout({ children }: LayoutProps) {
             >
               Contact
             </Link>
-            {navLocation === "contact" ? (
-              <div className="w-full min-h-[2px] -translate-x-[2px] bg-white/75" />
+            {navLocation === "contactAnchor" ? (
+              <motion.div
+                layoutId="underbar"
+                className="w-full min-h-[2px] mr-[3px] bg-white/75"
+              />
             ) : null}
           </div>
         </div>

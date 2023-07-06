@@ -9,7 +9,7 @@ export default function About() {
         <div className="w-full grid grid-cols-2 gap-20">
           {/* Typewriter */}
           <div className="flex justify-around flex-col">
-            <h1 id="about" className="title">
+            <h1 id="aboutAnchor" className="title">
               About Me
             </h1>
             <div className="flex flex-col space-y-10 tracking-widest text-lg">

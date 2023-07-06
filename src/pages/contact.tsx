@@ -7,7 +7,7 @@ export default function Contact() {
         <div className="w-full grid grid-cols-2 gap-20">
           <div className="w-[500px] h-[600px] bg-red-900 mt-10"></div>
           <div className="w-full h-full flex flex-col items-end justify-evenly">
-            <h1 id="contact" className="title">
+            <h1 id="contactAnchor" className="title">
               Contact
             </h1>
             <div className="flex flex-col items-end space-y-2">
