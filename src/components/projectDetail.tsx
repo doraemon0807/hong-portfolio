@@ -74,7 +74,9 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
         </div>
         <div className="flex flex-col h-full py-4 justify-evenly">
           <div className="">
-            <h5 className="mb-2 tracking-[3px] uppercase text-sm">Feature</h5>
+            <h5 className="mb-2 text-gray-300 tracking-[3px] uppercase text-sm">
+              Feature
+            </h5>
             <div className="flex flex-col">
               {selectedProject?.features.map((feature) => (
                 <div key={feature}>{feature}</div>
@@ -82,17 +84,24 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
             </div>
           </div>
           <div className="flex flex-col">
-            <h5 className="mb-2 tracking-[3px] uppercase text-sm">Package</h5>
+            <h5 className="mb-2 text-gray-300 tracking-[3px] uppercase text-sm">
+              Package
+            </h5>
             <div className="flex space-x-4">
               {selectedProject?.packages.map((pkg) => (
-                <div className="w-14 h-14 overflow-hidden bg-white rounded-full flex justify-center items-center">
-                  <Image src={`/${pkg.image}`} alt="" width={50} height={50} />
+                <div className="w-[60px] h-[60px] overflow-hidden bg-white rounded-full flex justify-center items-center">
+                  <Image
+                    src={`/icons/${pkg.image}`}
+                    alt=""
+                    width={50}
+                    height={50}
+                  />
                 </div>
               ))}
             </div>
           </div>
           <div>
-            <h5 className="mb-2 tracking-[3px] uppercase text-sm">
+            <h5 className="mb-2 text-gray-300 tracking-[3px] uppercase text-sm">
               Deployment
             </h5>
             {selectedProject?.deployments.map((deployment) => (

@@ -37,7 +37,7 @@ export default function Timeline({
       <motion.div
         className={cls(
           `w-4 h-4 rounded-full ring-dark ring-4 bg-dark ring-offset-2 ring-offset-gray-500 transition-all`,
-          counter === index ? "ring-offset-dark ring-offset-4 bg-gray-100" : ""
+          counter === index ? "ring-offset-dark ring-offset-2 bg-gray-100" : ""
         )}
       />
       <div

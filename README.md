@@ -4,3 +4,4 @@ Yun's Portfolio
 - contact page
 - header link + scroll event
 - header indicator
+- fancy cursor?

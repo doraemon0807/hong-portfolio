@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .title {
   font-size: 32px;
   font-weight: 600;

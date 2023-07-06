@@ -1,3 +1,5 @@
+import Button from "@/components/button";
+
 export default function Contact() {
   return (
     <div className="w-full h-screen px-40">
@@ -13,9 +15,15 @@ export default function Contact() {
               <h5 className="tracking-widest ">doraemon0807@hotmail.com</h5>
               <h5 className="tracking-widest ">+1 514-467-8152</h5>
             </div>
-            <div className="flex space-x-20">
-              <div>LinkedIn</div>
-              <div>GitHub</div>
+            <div className="flex space-x-2">
+              <Button
+                text={"GitHub"}
+                link={"https://github.com/doraemon0807"}
+              />
+              <Button
+                text={"LinkedIn"}
+                link={"https://www.linkedin.com/in/yunseok-hong-9896a5158/"}
+              />
             </div>
           </div>
         </div>
