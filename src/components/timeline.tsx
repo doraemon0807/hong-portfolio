@@ -42,17 +42,19 @@ export default function Timeline({
       />
       <div
         className={cls(
-          `flex flex-col transition-all`,
+          `flex flex-col transition-all origin-left`,
           counter === index ? "text-white scale-[1.2]" : "text-gray-500"
         )}
       >
-        <h4 className="text-base">{title}</h4>
-        <h5 className="text-xs">{subtitle}</h5>
+        <h4 className="text-base tracking-widest">{title}</h4>
+        <h5 className="text-xs tracking-widest">{subtitle}</h5>
       </div>
       <div
         className={cls(
-          `absolute -left-32 text-xs flex flex-col items-center transition-all`,
-          counter === index ? "text-white scale-[1.2]" : "text-gray-500"
+          `absolute -left-32 text-xs flex flex-col items-center transition-all origin-right`,
+          counter === index
+            ? "text-white scale-[1.2] tracking-[2px]"
+            : "text-gray-500"
         )}
       >
         <h6>{endTime}</h6>

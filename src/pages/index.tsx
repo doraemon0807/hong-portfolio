@@ -1,17 +1,10 @@
 import Layout from "@/components/layout";
-import { cls } from "@/lib/utils";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import Home from "@/pages/home";
 import Projects from "@/pages/projects";
 import { useInView } from "framer-motion";
-import {
-  Children,
-  RefObject,
-  cloneElement,
-  isValidElement,
-  useRef,
-} from "react";
+import { Children, cloneElement, isValidElement, useRef } from "react";
 
 interface SectionProps {
   children: React.ReactNode;

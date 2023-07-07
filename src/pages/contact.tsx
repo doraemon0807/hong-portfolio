@@ -29,11 +29,11 @@ export default function Contact({ isInView }: BoxProps) {
                 isInView ? "opacity-1" : "opacity-0 translate-y-12"
               )}
             >
-              <h3 className="font-medium tracking-widest ">
+              <h3 className="font-medium tracking-[2px] ">
                 Reach out to me at:
               </h3>
-              <h5 className="tracking-widest ">doraemon0807@hotmail.com</h5>
-              <h5 className="tracking-widest ">+1 514-467-8152</h5>
+              <h5 className="tracking-[3px] ">doraemon0807@hotmail.com</h5>
+              <h5 className="tracking-[3px] ">+1 514-467-8152</h5>
             </div>
             <div
               className={cls(

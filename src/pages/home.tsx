@@ -16,14 +16,16 @@ export default function Home({ isInView }: BoxProps) {
           )}
         >
           <h2 className="text-5xl">Hello, I'm</h2>
-          <h1 className="text-7xl font-bold mt-5">Yunseok Hong</h1>
-          <div className="text-2xl font-medium mt-10 flex">
+          <h1 className="text-7xl font-bold mt-5 tracking-[4px] drop-shadow-[2px_2px_1px_rgba(120,120,120,0.8)]">
+            Yunseok Hong
+          </h1>
+          <div className="text-2xl tracking-[2px] font-medium mt-10 flex">
             <span>A </span>
             <ul className="relative font-semibold">
               <li className="animate-swapWordAnimation opacity-0 tracking-[2px] lg-1 absolute left-0">
                 Fullstack
               </li>
-              <li className="animate-swapWordAnimation opacity-0 absolute left-0 lg-1 animation-delay-3000">
+              <li className="animate-swapWordAnimation opacity-0 absolute tracking-[2px] left-0 lg-1 animation-delay-3000">
                 Frontend
               </li>
               <li className="animate-swapWordAnimation opacity-0 tracking-[3px] lg-1 absolute left-0 animation-delay-6000">

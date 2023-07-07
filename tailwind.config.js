@@ -13,6 +13,10 @@ module.exports = {
       animation: {
         swapWordAnimation: "swapWords 9s ease-in-out infinite",
       },
+      fontFamily: {
+        Roboto: ["Roboto"],
+        Lobster: ["Lobster"],
+      },
     },
   },
   plugins: [require("tailwindcss-animation-delay")],

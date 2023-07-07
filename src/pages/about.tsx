@@ -21,7 +21,7 @@ export default function About({ isInView }: BoxProps) {
             </h1>
             <div
               className={cls(
-                "flex flex-col space-y-10 tracking-widest text-lg transition-all duration-1000 delay-100",
+                "flex flex-col space-y-10 tracking-[4px] text-lg transition-all duration-1000 delay-100",
                 isInView ? "opacity-1" : "opacity-0 translate-y-12"
               )}
             >
