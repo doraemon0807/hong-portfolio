@@ -1,12 +1,13 @@
 import ProjectDetail from "@/components/projectDetail";
 import { projectList } from "@/lib/projectList";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import disableScroll from "disable-scroll";
 import ProjectThumb from "@/components/projectThumb";
-import { useInView } from "framer-motion";
+import { BoxProps } from "@/pages";
+import { cls } from "@/lib/utils";
 
-export default function Projects() {
+export default function Projects({ isInView }: BoxProps) {
   const [id, setId] = useState<null | string>(null);
 
   const overlayVariants = {
@@ -33,11 +34,22 @@ export default function Projects() {
 
   return (
     <div id="projectsBox" className="w-full min-h-screen py-20 select-none">
-      <div className="flex flex-col items-center relative">
-        <h1 id="projectsAnchor" className="title mb-24">
+      <div className="flex flex-col items-center relative mb-20">
+        <h1
+          id="projectsAnchor"
+          className={cls(
+            "title my-24 transition-all duration-1000",
+            isInView ? "opacity-1" : "opacity-0 translate-y-12"
+          )}
+        >
           Projects
         </h1>
-        <div className="grid grid-cols-3 gap-20">
+        <div
+          className={cls(
+            "grid grid-cols-3 gap-20 transition-all duration-1000 delay-300",
+            isInView ? "opacity-1" : "opacity-0 translate-y-12"
+          )}
+        >
           {projectList.map((project) => (
             <ProjectThumb project={project} setId={setId} key={project.id} />
           ))}

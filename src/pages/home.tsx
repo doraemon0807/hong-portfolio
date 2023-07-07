@@ -1,14 +1,20 @@
+import { cls } from "@/lib/utils";
+import { BoxProps } from "@/pages";
 import TagCloud from "@frank-mayer/react-tag-cloud";
 import { TagCloudOptions } from "TagCloud";
-import { useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
 
-export default function Home() {
+export default function Home({ isInView }: BoxProps) {
   return (
     <div id="homeBox" className="w-full h-screen px-20 select-none relative">
       <div id="homeAnchor" className="absolute mt-40"></div>
       <div className="w-full h-full grid grid-cols-2 items-center gap-x-0.5">
-        <div className="place-self-center tracking-widest">
+        {/* TextArea */}
+        <div
+          className={cls(
+            "place-self-center tracking-widest transition-all duration-1000",
+            isInView ? "opacity-1" : "opacity-0 translate-y-12"
+          )}
+        >
           <h2 className="text-5xl">Hello, I'm</h2>
           <h1 className="text-7xl font-bold mt-5">Yunseok Hong</h1>
           <div className="text-2xl font-medium mt-10 flex">
@@ -28,7 +34,12 @@ export default function Home() {
           </div>
         </div>
         {/* TagCloud */}
-        <div className="place-self-center">
+        <div
+          className={cls(
+            "place-self-center transition-all duration-1000 delay-100",
+            isInView ? "opacity-1" : "opacity-0 translate-y-12"
+          )}
+        >
           <TagCloud
             className="text-2xl select-none"
             options={(w: Window & typeof globalThis): TagCloudOptions => ({

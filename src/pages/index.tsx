@@ -5,25 +5,39 @@ import Contact from "@/pages/contact";
 import Home from "@/pages/home";
 import Projects from "@/pages/projects";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import {
+  Children,
+  RefObject,
+  cloneElement,
+  isValidElement,
+  useRef,
+} from "react";
 
-interface sectionProps {
+interface SectionProps {
   children: React.ReactNode;
 }
 
-function Section({ children }: sectionProps) {
-  const ref = useRef(null);
+export interface BoxProps {
+  isInView?: boolean;
+}
+
+function Section({ children }: SectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
 
   return (
-    <div
-      ref={ref}
-      className={cls(
-        "transition-all duration-1000",
-        isInView ? "opacity-1" : "opacity-0"
-      )}
-    >
-      {children}
+    <div ref={ref} className="">
+      {Children.map(children, (child) => {
+        if (isValidElement(child)) {
+          return cloneElement(
+            child as React.ReactElement<BoxProps>,
+            {
+              isInView,
+            } as BoxProps
+          );
+        }
+        return child;
+      })}
     </div>
   );
 }

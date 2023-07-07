@@ -1,19 +1,30 @@
 import Timeline from "@/components/timeline";
-import { Element } from "react-scroll";
 import Typewriter from "typewriter-effect";
-import { useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-export default function About() {
+import { BoxProps } from "@/pages";
+import { cls } from "@/lib/utils";
+
+export default function About({ isInView }: BoxProps) {
   return (
     <div id="aboutBox" className="w-full h-screen px-40 select-none">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full grid grid-cols-2 gap-20">
           {/* Typewriter */}
           <div className="flex justify-around flex-col">
-            <h1 id="aboutAnchor" className="title">
+            <h1
+              id="aboutAnchor"
+              className={cls(
+                "title transition-all duration-1000",
+                isInView ? "opacity-1" : "opacity-0 translate-y-12"
+              )}
+            >
               About Me
             </h1>
-            <div className="flex flex-col space-y-10 tracking-widest text-lg">
+            <div
+              className={cls(
+                "flex flex-col space-y-10 tracking-widest text-lg transition-all duration-1000 delay-100",
+                isInView ? "opacity-1" : "opacity-0 translate-y-12"
+              )}
+            >
               <div className="flex">
                 <span>I</span>
                 <Typewriter
@@ -68,7 +79,12 @@ export default function About() {
             </div>
           </div>
           {/* Timeline */}
-          <div className="w-full flex h-full mt-10 ml-20">
+          <div
+            className={cls(
+              "w-full flex h-full mt-10 ml-20 transition-all delay-100 duration-1000",
+              isInView ? "opacity-1" : "opacity-0 translate-y-12"
+            )}
+          >
             <div className="border-l-2 my-4 border-gray-500 border-dotted">
               <div className="flex flex-col space-y-16 -translate-x-[9px]">
                 <Timeline

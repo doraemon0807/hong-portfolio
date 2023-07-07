@@ -106,7 +106,6 @@ export default function Layout({ children }: LayoutProps) {
               to="projectsBox"
               smooth={true}
               duration={500}
-              offset={-120}
             >
               Projects
             </Link>
@@ -135,7 +134,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </motion.nav>
-      <div className="px-32 space-y-10 text-white z-10 divide-y-2">
+      <div className="px-32 space-y-20 text-white z-10 divide-y-2">
         {children}
       </div>
     </div>
