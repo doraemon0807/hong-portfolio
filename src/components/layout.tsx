@@ -1,4 +1,9 @@
-import { useAnimation, useMotionValueEvent, useScroll } from "framer-motion";
+import {
+  useAnimation,
+  useInView,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
@@ -33,7 +38,7 @@ export default function Layout({ children }: LayoutProps) {
   const [navLocation, setNavLocation] = useRecoilState(navLocationState);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((e) => {
+    const observer1 = new IntersectionObserver((e) => {
       if (e[0].isIntersecting) {
         setNavLocation(e[0].target.id);
       }
@@ -43,10 +48,10 @@ export default function Layout({ children }: LayoutProps) {
     const projectsAnchor = document.getElementById("projectsAnchor");
     const contactAnchor = document.getElementById("contactAnchor");
 
-    homeAnchor ? observer.observe(homeAnchor) : null;
-    aboutAnchor ? observer.observe(aboutAnchor) : null;
-    projectsAnchor ? observer.observe(projectsAnchor) : null;
-    contactAnchor ? observer.observe(contactAnchor) : null;
+    homeAnchor ? observer1.observe(homeAnchor) : null;
+    aboutAnchor ? observer1.observe(aboutAnchor) : null;
+    projectsAnchor ? observer1.observe(projectsAnchor) : null;
+    contactAnchor ? observer1.observe(contactAnchor) : null;
   }, []);
 
   return (
@@ -66,7 +71,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex flex-col items-center space-y-2">
             <Link
               className="cursor-pointer"
-              to="homeNav"
+              to="homeBox"
               smooth={true}
               duration={500}
             >
@@ -82,7 +87,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex flex-col items-center space-y-2">
             <Link
               className="cursor-pointer"
-              to="aboutNav"
+              to="aboutBox"
               smooth={true}
               duration={500}
             >
@@ -98,7 +103,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex flex-col items-center space-y-2">
             <Link
               className="cursor-pointer"
-              to="projectsNav"
+              to="projectsBox"
               smooth={true}
               duration={500}
               offset={-120}
@@ -115,7 +120,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex flex-col items-center space-y-2">
             <Link
               className="cursor-pointer"
-              to="contactNav"
+              to="contactBox"
               smooth={true}
               duration={500}
             >

@@ -1,8 +1,10 @@
 import Button from "@/components/button";
+import { useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function Contact() {
   return (
-    <div id="contactNav" className="w-full h-screen px-40">
+    <div id="contactBox" className="w-full h-screen px-40">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full grid grid-cols-2 gap-20">
           <div className="w-[500px] h-[600px] bg-red-900 mt-10"></div>

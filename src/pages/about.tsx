@@ -1,10 +1,11 @@
 import Timeline from "@/components/timeline";
 import { Element } from "react-scroll";
 import Typewriter from "typewriter-effect";
-
+import { useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 export default function About() {
   return (
-    <div id="aboutNav" className="w-full h-screen px-40 select-none">
+    <div id="aboutBox" className="w-full h-screen px-40 select-none">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full grid grid-cols-2 gap-20">
           {/* Typewriter */}

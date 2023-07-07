@@ -1,9 +1,11 @@
 import TagCloud from "@frank-mayer/react-tag-cloud";
 import { TagCloudOptions } from "TagCloud";
+import { useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   return (
-    <div id="homeNav" className="w-full h-screen px-20 select-none relative">
+    <div id="homeBox" className="w-full h-screen px-20 select-none relative">
       <div id="homeAnchor" className="absolute mt-40"></div>
       <div className="w-full h-full grid grid-cols-2 items-center gap-x-0.5">
         <div className="place-self-center tracking-widest">

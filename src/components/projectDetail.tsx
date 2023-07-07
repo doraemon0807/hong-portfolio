@@ -31,7 +31,7 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
   return (
     <motion.div
       layoutId={id}
-      className="w-4/5 h-3/4 bg-dark border-2 border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-0 bottom-0 m-auto rounded-md p-5 grid grid-cols-[6fr_3fr]"
+      className="w-4/5 h-3/4 bg-dark border-2 border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-12 bottom-0 m-auto rounded-md p-5 grid grid-cols-[6fr_3fr]"
     >
       {/* Images */}
       <div className="grid grid-rows-[11fr_1fr] ">

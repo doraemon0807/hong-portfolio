@@ -1,9 +1,10 @@
 import ProjectDetail from "@/components/projectDetail";
 import { projectList } from "@/lib/projectList";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import disableScroll from "disable-scroll";
 import ProjectThumb from "@/components/projectThumb";
+import { useInView } from "framer-motion";
 
 export default function Projects() {
   const [id, setId] = useState<null | string>(null);
@@ -31,7 +32,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="projectsNav" className="w-full min-h-screen py-20 select-none">
+    <div id="projectsBox" className="w-full min-h-screen py-20 select-none">
       <div className="flex flex-col items-center relative">
         <h1 id="projectsAnchor" className="title mb-24">
           Projects

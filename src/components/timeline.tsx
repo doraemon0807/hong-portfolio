@@ -36,7 +36,7 @@ export default function Timeline({
     <div {...rest} className="flex items-center space-x-10">
       <motion.div
         className={cls(
-          `w-4 h-4 rounded-full ring-dark ring-4 bg-dark ring-offset-2 ring-offset-gray-500 transition-all`,
+          `w-4 h-4 min-w-[16px] min-h-[16px] rounded-full ring-dark ring-4 bg-dark ring-offset-2 ring-offset-gray-500 transition-all`,
           counter === index ? "ring-offset-dark ring-offset-2 bg-gray-100" : ""
         )}
       />
