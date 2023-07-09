@@ -32,7 +32,7 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="w-screen h-screen">
-      <div className="bg-dark fixed -z-10 w-screen h-screen"></div>
+      <div className="bg-dark fixed -z-10 w-screen h-screen lg:bg-purple-600 xl:bg-dark"></div>
       <motion.nav
         variants={navVariant}
         initial={"top"}

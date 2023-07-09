@@ -26,7 +26,7 @@ export default function ProjectThumb({ project, setId }: ProjectThumbProps) {
       key={project.id}
       onClick={() => setId(project.id)}
       layoutId={project.id}
-      className="w-96 h-60 box-content cursor-pointer relative"
+      className="w-full aspect-[16/11] box-content cursor-pointer relative"
     >
       <Image
         src={`/projects/${project.coverImage}`}

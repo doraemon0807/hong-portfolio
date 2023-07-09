@@ -5,9 +5,12 @@ import { TagCloudOptions } from "TagCloud";
 
 export default function Home({ isInView }: BoxProps) {
   return (
-    <div id="homeBox" className="w-full h-screen px-20 select-none relative">
+    <div
+      id="homeBox"
+      className="w-full h-screen select-none relative flex justify-center items-center"
+    >
       <div id="homeAnchor" className="absolute mt-40"></div>
-      <div className="w-full h-full grid grid-cols-2 items-center gap-x-0.5">
+      <div className="w-full h-full grid relative xl:grid-cols-2 mx-auto items-center max-w-[1400px]">
         {/* TextArea */}
         <div
           className={cls(
@@ -16,7 +19,7 @@ export default function Home({ isInView }: BoxProps) {
           )}
         >
           <h2 className="text-5xl">Hello, I'm</h2>
-          <h1 className="text-7xl font-bold mt-5 tracking-[4px] drop-shadow-[2px_2px_1px_rgba(120,120,120,0.8)]">
+          <h1 className="text-7xl font-bold mt-5 tracking-[3.5px] drop-shadow-[2px_2px_1px_rgba(120,120,120,0.8)]">
             Yunseok Hong
           </h1>
           <div className="text-2xl tracking-[2px] font-medium mt-10 flex">
@@ -38,12 +41,12 @@ export default function Home({ isInView }: BoxProps) {
         {/* TagCloud */}
         <div
           className={cls(
-            "place-self-center transition-all duration-1000 delay-100",
+            "transition-all duration-1000 delay-100 w-full xl:block -xl:absolute -xl:scale-[2.5] -xl:-z-10 -xl:opacity-10",
             isInView ? "opacity-1" : "opacity-0 translate-y-12"
           )}
         >
           <TagCloud
-            className="text-2xl select-none"
+            className="text-2xl select-none flex items-center justify-center"
             options={(w: Window & typeof globalThis): TagCloudOptions => ({
               radius: Math.min(350, w.innerWidth, w.innerHeight) / 2,
               maxSpeed: "normal",
@@ -67,6 +70,37 @@ export default function Home({ isInView }: BoxProps) {
             ]}
           </TagCloud>
         </div>
+        {/* <div
+          className={cls(
+            "transition-all duration-1000 delay-100 w-full xl:block hidden",
+            isInView ? "opacity-1" : "opacity-0 translate-y-12"
+          )}
+        >
+          <TagCloud
+            className="text-2xl select-none flex items-center justify-center"
+            options={(w: Window & typeof globalThis): TagCloudOptions => ({
+              radius: Math.min(350, w.innerWidth, w.innerHeight) / 2,
+              maxSpeed: "normal",
+              keep: true,
+            })}
+          >
+            {[
+              "HTML",
+              "CSS",
+              "NodeJS",
+              "Express",
+              "SCSS",
+              "Prisma",
+              "Typescript",
+              "RestAPI",
+              "MongoDB",
+              "React",
+              "NextJS",
+              "TailwindCSS",
+              "Javascript",
+            ]}
+          </TagCloud>
+        </div> */}
       </div>
     </div>
   );

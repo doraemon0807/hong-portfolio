@@ -17,6 +17,9 @@ module.exports = {
         Roboto: ["Roboto"],
         Lobster: ["Lobster"],
       },
+      screens: {
+        "-xl": { max: "1279px" },
+      },
     },
   },
   plugins: [require("tailwindcss-animation-delay")],

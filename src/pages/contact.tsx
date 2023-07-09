@@ -4,16 +4,16 @@ import { BoxProps } from "@/pages";
 
 export default function Contact({ isInView }: BoxProps) {
   return (
-    <div id="contactBox" className="w-full h-screen px-40">
-      <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full grid grid-cols-2 gap-20">
+    <div id="contactBox" className="w-full h-screen px-20">
+      <div className="w-full h-full flex justify-center items-center max-w-[1200px] mx-auto">
+        <div className="w-full h-4/5 grid grid-cols-2 gap-16">
           <div
             className={cls(
-              "w-[500px] h-[600px] bg-red-900 mt-10 transition-all duration-1000 delay-100",
+              "w-full aspect-[3/4] min-w-[450px] bg-red-900 mt-10 transition-all duration-1000 delay-100",
               isInView ? "opacity-1" : "opacity-0 translate-y-12"
             )}
           ></div>
-          <div className="w-full h-full flex flex-col items-end justify-evenly">
+          <div className="w-full h-full max-w-[600px] flex flex-col items-end justify-evenly">
             <h1
               id="contactAnchor"
               className={cls(

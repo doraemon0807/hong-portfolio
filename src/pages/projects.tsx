@@ -46,7 +46,7 @@ export default function Projects({ isInView }: BoxProps) {
         </h1>
         <div
           className={cls(
-            "grid grid-cols-3 gap-20 transition-all duration-1000 delay-300",
+            "grid grid-cols-3 gap-10 transition-all duration-1000 delay-300",
             isInView ? "opacity-1" : "opacity-0 translate-y-12"
           )}
         >

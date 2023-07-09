@@ -5,15 +5,15 @@ import { cls } from "@/lib/utils";
 
 export default function About({ isInView }: BoxProps) {
   return (
-    <div id="aboutBox" className="w-full h-screen px-40 select-none">
-      <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full grid grid-cols-2 gap-20">
+    <div id="aboutBox" className="w-full h-screen px-24 select-none">
+      <div className="w-full h-full flex justify-center items-center max-w-[1200px] mx-auto">
+        <div className="w-full xl:grid xl:grid-cols-2 xl:gap-20 -xl:flex -xl:flex-col -xl:space-y-20 -xl:items-center">
           {/* Typewriter */}
-          <div className="flex justify-around flex-col">
+          <div className="flex flex-col w-full -xl:items-center">
             <h1
               id="aboutAnchor"
               className={cls(
-                "title transition-all duration-1000",
+                "title transition-all duration-1000 xl:mb-40 -xl:mb-20",
                 isInView ? "opacity-1" : "opacity-0 translate-y-12"
               )}
             >
@@ -21,7 +21,7 @@ export default function About({ isInView }: BoxProps) {
             </h1>
             <div
               className={cls(
-                "flex flex-col space-y-10 tracking-[4px] text-lg transition-all duration-1000 delay-100",
+                "w-full -xl:items-center flex flex-col xl:space-y-10 -xl:space-y-6 tracking-[4px] text-lg transition-all duration-1000 delay-100",
                 isInView ? "opacity-1" : "opacity-0 translate-y-12"
               )}
             >
@@ -81,11 +81,11 @@ export default function About({ isInView }: BoxProps) {
           {/* Timeline */}
           <div
             className={cls(
-              "w-full flex h-full mt-10 ml-20 transition-all delay-100 duration-1000",
+              "w-full flex h-full mt-10 ml-20 transition-all delay-100 duration-1000 -xl:flex -xl:justify-center -xl:-translate-x-16",
               isInView ? "opacity-1" : "opacity-0 translate-y-12"
             )}
           >
-            <div className="border-l-2 my-4 border-gray-500 border-dotted">
+            <div className="border-l-2 my-4 border-gray-500 border-dotted translate-x-20">
               <div className="flex flex-col space-y-16 -translate-x-[9px]">
                 <Timeline
                   index={1}
