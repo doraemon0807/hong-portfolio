@@ -1,9 +1,8 @@
 import Button from "@/components/button";
+import ProjectDetailBig from "@/components/projectDetailBig";
+import ProjectDetailSmall from "@/components/projectDetailSmall";
 import { projectList } from "@/lib/projectList";
-import { cls } from "@/lib/utils";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 
 interface ProjectDetailProps {
   id: string;
@@ -28,92 +27,32 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
     };
   }, []);
 
+  const [lg, setLg] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWindowSize(window.innerWidth));
+  }, []);
+
+  useEffect(() => {
+    if (windowSize >= 1023) {
+      setLg(true);
+    } else {
+      setLg(false);
+    }
+  }, [windowSize]);
+
   return (
-    <motion.div
-      layoutId={id}
-      className="w-4/5 h-3/4 bg-dark border-2 border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-12 bottom-0 m-auto rounded-md p-5 grid grid-cols-[6fr_3fr]"
-    >
-      {/* Images */}
-      <div className="grid grid-rows-[11fr_1fr] py-10">
-        <div className="relative">
-          {selectedProject?.images.map((image, idx) => (
-            <Image
-              alt=""
-              src={`/projects/${image}`}
-              key={image}
-              width={1000}
-              height={1000}
-              quality={100}
-              className={cls(
-                "rounded-sm absolute w-full h-full flex justify-center items-center transition-all duration-1000",
-                counter - 1 === idx ? "opacity-1" : "opacity-0"
-              )}
-            ></Image>
-          ))}
-        </div>
-        <div className="flex justify-center space-x-10 mt-4">
-          {selectedProject?.images.map((image, idx) => (
-            <div
-              key={idx}
-              className="w-4 h-4 rounded-full transition-all bg-gray-500 flex justify-center items-center"
-            >
-              <div
-                className={cls(
-                  "w-4 h-4 rounded-full transition-all bg-gray-100 ring-1 ring-gray-100",
-                  counter - 1 === idx ? "scale-100" : "scale-0"
-                )}
-              ></div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Description */}
-      <div className="tracking-widest px-10 flex flex-col">
-        <div className="">
-          <h1 className="text-2xl font-bold">{selectedProject?.title}</h1>
-        </div>
-        <div className="flex flex-col h-full py-4 justify-evenly">
-          <div className="">
-            <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
-              Feature
-            </h5>
-            <div className="flex flex-col">
-              {selectedProject?.features.map((feature) => (
-                <div key={feature}>{feature}</div>
-              ))}
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
-              Package
-            </h5>
-            <div className="flex space-x-4">
-              {selectedProject?.packages.map((pkg) => (
-                <div className="w-[60px] h-[60px] overflow-hidden bg-white rounded-full flex justify-center items-center">
-                  <Image
-                    src={`/icons/${pkg.image}`}
-                    alt=""
-                    width={50}
-                    height={50}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
-              Deployment
-            </h5>
-            {selectedProject?.deployments.map((deployment) => (
-              <div key={deployment}>{deployment}</div>
-            ))}
-          </div>
-          <div className="flex space-x-2">
-            <Button text={"GitHub"} link={selectedProject?.github!} />
-            <Button text={"Try Live"} link={selectedProject?.link!} />
-          </div>
-        </div>
-      </div>
-    </motion.div>
+    <>
+      {lg ? (
+        <ProjectDetailBig id={id} counter={counter} project={selectedProject} />
+      ) : (
+        <ProjectDetailSmall
+          id={id}
+          counter={counter}
+          project={selectedProject}
+        />
+      )}
+    </>
   );
 }

@@ -5,7 +5,7 @@ import { cls } from "@/lib/utils";
 
 export default function About({ isInView }: BoxProps) {
   return (
-    <div id="aboutBox" className="w-full h-screen px-24 select-none">
+    <div id="aboutBox" className="w-full h-screen xl:px-24 select-none">
       <div className="w-full h-full flex justify-center items-center max-w-[1200px] mx-auto">
         <div className="w-full xl:grid xl:grid-cols-2 xl:gap-20 -xl:flex -xl:flex-col -xl:space-y-20 -xl:items-center">
           {/* Typewriter */}

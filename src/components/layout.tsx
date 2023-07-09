@@ -1,7 +1,7 @@
 import HeaderLink from "@/components/headerLink";
+import Logo from "@/components/logo";
 import { useAnimation, useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -25,26 +25,16 @@ export default function Layout({ children }: LayoutProps) {
     latest > 60 ? navAnimation.start("scroll") : navAnimation.start("top");
   });
 
-  const router = useRouter();
-  const refresh = () => {
-    router.push("/");
-  };
-
   return (
-    <div className="w-screen h-screen">
-      <div className="bg-dark fixed -z-10 w-screen h-screen lg:bg-purple-600 xl:bg-dark"></div>
+    <div className="w-full h-full">
+      <div className="bg-dark fixed -z-10 w-full h-full"></div>
       <motion.nav
         variants={navVariant}
         initial={"top"}
         animate={navAnimation}
         className="select-none w-full h-20 flex fixed pt-20 pb-12 px-32 z-50 justify-between items-center text-white"
       >
-        <div
-          onClick={refresh}
-          className="cursor-pointer text-5xl font-Lobster drop-shadow-[2px_2px_1px_rgba(180,180,180,0.8)]"
-        >
-          Ys
-        </div>
+        <Logo />
         <div className="flex space-x-10 text-xs uppercase tracking-[6px] font-medium">
           <HeaderLink location={"homeAnchor"} target={"homeBox"}>
             Home
