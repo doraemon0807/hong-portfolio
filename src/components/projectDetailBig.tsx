@@ -2,26 +2,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { cls } from "@/lib/utils";
 import Button from "@/components/button";
+import Packages from "@/components/packages";
+import { ProjectProps } from "@/pages/projects";
 
-interface ProjectDetailBigProps {
+interface ProjectDetailBigProps extends ProjectProps {
   id: string;
   counter: number;
-  project:
-    | {
-        id: string;
-        title: string;
-        features: string[];
-        packages: {
-          name: string;
-          image: string;
-        }[];
-        coverImage: string;
-        images: string[];
-        deployments: string[];
-        github: string;
-        link: string;
-      }
-    | undefined;
   className?: string;
 }
 
@@ -94,19 +80,7 @@ export default function ProjectDetailBig({
             <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
               Package
             </h5>
-            <div className="flex space-x-4">
-              {project?.packages.map((pkg) => (
-                <div className="max-w-[60px] min-w-[30px] p-[2px] aspect-square overflow-hidden bg-white rounded-full flex justify-center items-center">
-                  <Image
-                    src={`/icons/${pkg.image}`}
-                    alt=""
-                    key={pkg.name}
-                    width={50}
-                    height={50}
-                  />
-                </div>
-              ))}
-            </div>
+            <Packages project={project} />
           </div>
           <div>
             <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">

@@ -7,6 +7,7 @@ export const projectList = [
       { name: "NextJS", image: "next.webp" },
       { name: "Typescript", image: "typescript.webp" },
       { name: "TailwindCSS", image: "tailwindcss.webp" },
+      { name: "Framer Motion", image: "motion.webp" },
     ],
     coverImage: "portfolio_cover.png",
     images: ["portfolio_1.png", "portfolio_2.png", "portfolio_3.png"],

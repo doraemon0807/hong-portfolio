@@ -1,10 +1,27 @@
 import ProjectDetail from "@/components/projectDetail";
 import { projectList } from "@/lib/projectList";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import ProjectThumb from "@/components/projectThumb";
 import { BoxProps } from "@/pages";
 import { cls, useScrollLock } from "@/lib/utils";
+
+export interface ProjectProps {
+  project?: {
+    id: string;
+    title: string;
+    features: string[];
+    packages: {
+      name: string;
+      image: string;
+    }[];
+    coverImage: string;
+    images: string[];
+    deployments: string[];
+    github: string;
+    link: string;
+  };
+}
 
 export default function Projects({ isInView }: BoxProps) {
   const [id, setId] = useState<null | string>(null);
