@@ -1,4 +1,3 @@
-import Cursor from "@/components/cursor";
 import Layout from "@/components/layout";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
@@ -38,22 +37,19 @@ function Section({ children }: SectionProps) {
 
 export default function Index() {
   return (
-    <div className="cursor-none">
-      <Layout>
-        <Section>
-          <Home />
-        </Section>
-        <Section>
-          <About />
-        </Section>
-        <Section>
-          <Projects />
-        </Section>
-        <Section>
-          <Contact />
-        </Section>
-      </Layout>
-      <Cursor />
-    </div>
+    <Layout>
+      <Section>
+        <Home />
+      </Section>
+      <Section>
+        <About />
+      </Section>
+      <Section>
+        <Projects />
+      </Section>
+      <Section>
+        <Contact />
+      </Section>
+    </Layout>
   );
 }

@@ -13,7 +13,7 @@ export default function About({ isInView }: BoxProps) {
             <h1
               id="aboutAnchor"
               className={cls(
-                "title transition-all duration-1000 xl:mb-40 -xl:mb-20",
+                "title transition-all duration-1000 xl:mb-40 -xl:mb-20 -xl:mt-40",
                 isInView ? "opacity-1" : "opacity-0 translate-y-12"
               )}
             >

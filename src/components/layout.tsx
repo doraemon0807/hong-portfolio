@@ -50,7 +50,7 @@ export default function Layout({ children }: LayoutProps) {
           </HeaderLink>
         </div>
       </motion.nav>
-      <div className="px-32 space-y-20 text-white z-10 divide-y-2">
+      <div className="px-32 space-y-20 overflow-x-hidden text-white z-10 divide-y-2">
         {children}
       </div>
     </div>
