@@ -1,8 +1,7 @@
 import ProjectDetail from "@/components/projectDetail";
 import { projectList } from "@/lib/projectList";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import disableScroll from "disable-scroll";
 import ProjectThumb from "@/components/projectThumb";
 import { BoxProps } from "@/pages";
 import { cls, useScrollLock } from "@/lib/utils";
@@ -15,16 +14,12 @@ export default function Projects({ isInView }: BoxProps) {
       backgroundColor: "rgba(0,0,0,0)",
     },
     animate: {
-      backgroundColor: "rgba(0,0,0,0.6)",
+      backgroundColor: "rgba(0,0,0,0.8)",
     },
     exit: {
       backgroundColor: "rgba(0,0,0,0)",
     },
   };
-
-  // useEffect(() => {
-  //   id ? disableScroll.on() : disableScroll.off();
-  // }, [id]);
 
   const { lockScroll, unlockScroll } = useScrollLock();
 
@@ -72,7 +67,7 @@ export default function Projects({ isInView }: BoxProps) {
                 animate={"animate"}
                 exit={"exit"}
                 variants={overlayVariants}
-                className="w-screen h-[200%] absolute"
+                className="w-screen h-[200%] z-40 absolute"
               ></motion.div>
               <ProjectDetail id={id} />
             </>

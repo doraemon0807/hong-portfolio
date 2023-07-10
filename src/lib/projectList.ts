@@ -1,7 +1,7 @@
 export const projectList = [
   {
     id: "project1",
-    title: "My Portfolio",
+    title: "My Portfolio - Fully Responsive Webpage",
     features: ["Fully Responsive", "Scroll Events"],
     packages: [
       { name: "NextJS", image: "next.webp" },

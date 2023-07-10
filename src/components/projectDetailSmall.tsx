@@ -36,10 +36,11 @@ export default function ProjectDetailSmall({
       id={"projectDetail"}
       layoutId={id}
       className={cls(
-        "w-4/5 h-3/4 space-y-4 bg-dark border-2 overflow-y-auto grid grid-rows-[11fr_1fr_10fr] border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-12 bottom-0 m-auto rounded-md p-5",
+        "z-50 w-4/5 h-3/4 space-y-5 bg-dark border-2 overflow-y-auto grid grid-rows-[12fr_1fr_12fr] border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-12 bottom-0 m-auto rounded-md p-5",
         className ? className : ""
       )}
     >
+      {/* image */}
       <div className="relative flex justify-center items-center">
         {project?.images.map((image, idx) => (
           <Image
@@ -50,13 +51,13 @@ export default function ProjectDetailSmall({
             height={1000}
             quality={100}
             className={cls(
-              "rounded-sm absolute top-0 min-h-[330px] max-w-[550px] w-full aspect-[8/5] flex justify-center items-center transition-all duration-1000",
+              "rounded-sm absolute top-0 min-h-[337px] max-w-[540px] w-full aspect-[8/5] flex justify-center items-center transition-all duration-1000",
               counter - 1 === idx ? "opacity-1" : "opacity-0"
             )}
           ></Image>
         ))}
       </div>
-      <div className="flex justify-center space-x-10 mt-4">
+      <div className="flex justify-center h-full space-x-10">
         {project?.images.map((image, idx) => (
           <div
             key={idx}
@@ -71,11 +72,12 @@ export default function ProjectDetailSmall({
           </div>
         ))}
       </div>
+      {/* description */}
       <div className="tracking-widest flex flex-col overflow-y-scroll">
         <div className="">
           <h1 className="text-2xl font-bold">{project?.title}</h1>
         </div>
-        <div className="flex flex-col h-full py-4 justify-evenly">
+        <div className="flex flex-col py-4 justify-evenly space-y-6">
           <div className="">
             <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
               Feature

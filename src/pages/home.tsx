@@ -67,6 +67,8 @@ export default function Home({ isInView }: BoxProps) {
               "NextJS",
               "TailwindCSS",
               "Javascript",
+              "Python",
+              "Flask",
             ]}
           </TagCloud>
         </div>
