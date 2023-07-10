@@ -2,8 +2,24 @@ import { cls } from "@/lib/utils";
 import { BoxProps } from "@/pages";
 import TagCloud from "@frank-mayer/react-tag-cloud";
 import { TagCloudOptions } from "TagCloud";
+import { useEffect, useState } from "react";
 
 export default function Home({ isInView }: BoxProps) {
+  const [lg, setLg] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWindowSize(window.innerWidth));
+  }, []);
+
+  useEffect(() => {
+    if (windowSize >= 1280) {
+      setLg(true);
+    } else {
+      setLg(false);
+    }
+  }, [windowSize]);
+
   return (
     <div
       id="homeBox"
@@ -41,14 +57,15 @@ export default function Home({ isInView }: BoxProps) {
         {/* TagCloud */}
         <div
           className={cls(
-            "transition-all duration-1000 delay-100 w-full xl:block -xl:absolute -xl:scale-[2.5] -xl:-z-10 -xl:opacity-10",
+            "transition-all duration-1000 delay-100 w-full xl:block -xl:absolute -xl:-z-10 -xl:opacity-10",
             isInView ? "opacity-1" : "opacity-0 translate-y-12"
           )}
         >
           <TagCloud
-            className="text-2xl select-none flex items-center justify-center"
+            className="text-2xl -xl:text-5xl select-none flex items-center justify-center"
             options={(w: Window & typeof globalThis): TagCloudOptions => ({
-              radius: Math.min(350, w.innerWidth, w.innerHeight) / 2,
+              radius:
+                Math.min(lg ? 350 : 1000, w.innerWidth, w.innerHeight) / 2,
               maxSpeed: "normal",
               keep: true,
             })}
