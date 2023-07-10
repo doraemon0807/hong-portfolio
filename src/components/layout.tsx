@@ -32,10 +32,10 @@ export default function Layout({ children }: LayoutProps) {
         variants={navVariant}
         initial={"top"}
         animate={navAnimation}
-        className="select-none w-full h-20 flex fixed pt-20 pb-12 px-32 z-50 justify-between items-center text-white"
+        className="select-none w-full h-20 flex fixed pt-20 pb-12 md:px-32 -md:px-10 -md:justify-center z-50 justify-between items-center text-white"
       >
         <Logo />
-        <div className="flex space-x-10 text-xs uppercase tracking-[6px] font-medium">
+        <div className="flex md:space-x-10 -md:justify-evenly text-xs -md:w-full uppercase tracking-[6px] font-medium">
           <HeaderLink location={"homeAnchor"} target={"homeBox"}>
             Home
           </HeaderLink>
