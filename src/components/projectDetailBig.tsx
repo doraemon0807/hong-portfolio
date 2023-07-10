@@ -33,6 +33,7 @@ export default function ProjectDetailBig({
 }: ProjectDetailBigProps) {
   return (
     <motion.div
+      id={"projectDetail"}
       layoutId={id}
       className={cls(
         "w-4/5 h-3/4 space-x-10 bg-dark border-2 border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-12 bottom-0 m-auto rounded-md p-5 grid grid-cols-[6fr_3fr]",

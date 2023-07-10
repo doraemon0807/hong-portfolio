@@ -1,11 +1,11 @@
 import ProjectDetail from "@/components/projectDetail";
 import { projectList } from "@/lib/projectList";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import disableScroll from "disable-scroll";
 import ProjectThumb from "@/components/projectThumb";
 import { BoxProps } from "@/pages";
-import { cls } from "@/lib/utils";
+import { cls, useScrollLock } from "@/lib/utils";
 
 export default function Projects({ isInView }: BoxProps) {
   const [id, setId] = useState<null | string>(null);
@@ -22,8 +22,17 @@ export default function Projects({ isInView }: BoxProps) {
     },
   };
 
+  // useEffect(() => {
+  //   id ? disableScroll.on() : disableScroll.off();
+  // }, [id]);
+
+  const { lockScroll, unlockScroll } = useScrollLock();
+
   useEffect(() => {
-    id ? disableScroll.on() : disableScroll.off();
+    const detail = document.getElementById("projectDetail");
+    const body = document.body;
+
+    id ? lockScroll(detail, body) : unlockScroll(detail, body);
   }, [id]);
 
   useEffect(() => {
