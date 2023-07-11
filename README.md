@@ -1,4 +1,4 @@
 Yun's Portfolio
 
-- contact page
-- deployment to Vercel
+- contact page photo
+- mobile version mq

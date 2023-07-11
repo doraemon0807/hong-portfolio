@@ -1,7 +1,7 @@
 import ProjectDetail from "@/components/projectDetail";
 import { projectList } from "@/lib/projectList";
 import { AnimatePresence, motion } from "framer-motion";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectThumb from "@/components/projectThumb";
 import { BoxProps } from "@/pages";
 import { cls, useScrollLock } from "@/lib/utils";

@@ -1,8 +1,7 @@
-import Button from "@/components/button";
 import ProjectDetailBig from "@/components/projectDetailBig";
 import ProjectDetailSmall from "@/components/projectDetailSmall";
 import { projectList } from "@/lib/projectList";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ProjectDetailProps {
   id: string;
