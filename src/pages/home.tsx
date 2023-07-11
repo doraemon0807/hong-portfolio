@@ -1,25 +1,12 @@
+import { mqState } from "@/lib/atom";
 import { cls } from "@/lib/utils";
 import { BoxProps } from "@/pages";
 import TagCloud from "@frank-mayer/react-tag-cloud";
 import { TagCloudOptions } from "TagCloud";
-import { useEffect, useState } from "react";
+import { useRecoilValue } from "recoil";
 
 export default function Home({ isInView }: BoxProps) {
-  const [lg, setLg] = useState(false);
-  const [windowSize, setWindowSize] = useState(0);
-
-  useEffect(() => {
-    setWindowSize(window.innerWidth);
-    window.addEventListener("resize", () => setWindowSize(window.innerWidth));
-  }, []);
-
-  useEffect(() => {
-    if (windowSize >= 1280) {
-      setLg(true);
-    } else {
-      setLg(false);
-    }
-  }, [windowSize]);
+  const screenSize = useRecoilValue(mqState);
 
   return (
     <div
@@ -35,13 +22,14 @@ export default function Home({ isInView }: BoxProps) {
             isInView ? "opacity-1" : "opacity-0 translate-y-12"
           )}
         >
-          <h2 className="text-5xl">Hello, I&apos;m</h2>
-          <h1 className="text-7xl font-bold mt-5 tracking-[3.5px] drop-shadow-[2px_2px_1px_rgba(120,120,120,0.8)]">
+          <h2 className="text-5xl -sm:text-center">Hello, I&apos;m</h2>
+          <h1 className="text-7xl -sm:text-center font-bold mt-5 tracking-[3.5px] drop-shadow-[2px_2px_1px_rgba(120,120,120,0.8)]">
             Yunseok Hong
           </h1>
-          <div className="text-2xl tracking-[2px] font-medium mt-10 flex">
-            <span>A </span>
-            <ul className="relative font-semibold">
+          <div className="relative text-2xl -sm:justify-center -sm:text-lg tracking-[2px] font-medium mt-10 flex">
+            <div className="">A </div>
+            <ul className="relative font-semibold flex items-center">
+              <span className="text-transparent">Fullstack</span>
               <li className="animate-swapWordAnimation opacity-0 tracking-[2px] lg-1 absolute left-0">
                 Fullstack
               </li>
@@ -52,7 +40,7 @@ export default function Home({ isInView }: BoxProps) {
                 Backend
               </li>
             </ul>
-            <span className="translate-x-[114px]"> Developer Wannabe</span>
+            <div className=""> Developer Wannabe</div>
           </div>
         </div>
         {/* TagCloud */}
@@ -66,7 +54,11 @@ export default function Home({ isInView }: BoxProps) {
             className="text-2xl -xl:text-5xl select-none flex items-center justify-center"
             options={(w: Window & typeof globalThis): TagCloudOptions => ({
               radius:
-                Math.min(lg ? 350 : 1000, w.innerWidth, w.innerHeight) / 2,
+                Math.min(
+                  screenSize == "xl" ? 350 : 1000,
+
+                  w.innerHeight
+                ) / 2,
               maxSpeed: "normal",
               keep: true,
             })}
@@ -90,37 +82,6 @@ export default function Home({ isInView }: BoxProps) {
             ]}
           </TagCloud>
         </div>
-        {/* <div
-          className={cls(
-            "transition-all duration-1000 delay-100 w-full xl:block hidden",
-            isInView ? "opacity-1" : "opacity-0 translate-y-12"
-          )}
-        >
-          <TagCloud
-            className="text-2xl select-none flex items-center justify-center"
-            options={(w: Window & typeof globalThis): TagCloudOptions => ({
-              radius: Math.min(350, w.innerWidth, w.innerHeight) / 2,
-              maxSpeed: "normal",
-              keep: true,
-            })}
-          >
-            {[
-              "HTML",
-              "CSS",
-              "NodeJS",
-              "Express",
-              "SCSS",
-              "Prisma",
-              "Typescript",
-              "RestAPI",
-              "MongoDB",
-              "React",
-              "NextJS",
-              "TailwindCSS",
-              "Javascript",
-            ]}
-          </TagCloud>
-        </div> */}
       </div>
     </div>
   );

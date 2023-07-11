@@ -29,7 +29,7 @@ export default function Navigator() {
       className="select-none w-full h-20 flex fixed pt-20 pb-12 md:px-32 -md:px-10 -md:justify-center z-30 justify-between items-center text-white"
     >
       <Logo />
-      <div className="flex md:space-x-10 -md:justify-evenly text-xs -md:w-full uppercase tracking-[6px] font-medium">
+      <div className="-sm:tracking-widest flex md:space-x-10 -md:justify-evenly text-xs -md:w-full uppercase tracking-[6px] font-medium">
         <HeaderLink location={"homeAnchor"} target={"homeBox"}>
           Home
         </HeaderLink>
