@@ -45,7 +45,7 @@ export default function Projects({ isInView }: BoxProps) {
     const body = document.body;
 
     id ? lockScroll(detail, body) : unlockScroll(detail, body);
-  }, [id]);
+  }, [id, lockScroll, unlockScroll]);
 
   useEffect(() => {
     document.addEventListener("keydown", (e: KeyboardEvent) => {

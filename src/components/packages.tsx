@@ -6,7 +6,10 @@ export default function Packages({ project }: ProjectProps) {
   return (
     <div className="flex space-x-4">
       {project?.packages.map((pkg) => (
-        <div className="max-w-[60px] min-w-[30px] p-[2px] aspect-square overflow-hidden bg-white rounded-full flex justify-center items-center">
+        <div
+          key={pkg.name}
+          className="max-w-[60px] min-w-[30px] p-[2px] aspect-square overflow-hidden bg-white rounded-full flex justify-center items-center"
+        >
           <Image
             src={`/icons/${pkg.image}`}
             alt=""

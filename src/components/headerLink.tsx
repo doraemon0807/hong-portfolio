@@ -32,7 +32,7 @@ export default function HeaderLink({
     aboutAnchor ? observer1.observe(aboutAnchor) : null;
     projectsAnchor ? observer1.observe(projectsAnchor) : null;
     contactAnchor ? observer1.observe(contactAnchor) : null;
-  }, []);
+  }, [setNavLocation]);
 
   return (
     <div className="flex flex-col items-center space-y-2">

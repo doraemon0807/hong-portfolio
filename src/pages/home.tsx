@@ -34,7 +34,7 @@ export default function Home({ isInView }: BoxProps) {
             isInView ? "opacity-1" : "opacity-0 translate-y-12"
           )}
         >
-          <h2 className="text-5xl">Hello, I'm</h2>
+          <h2 className="text-5xl">Hello, I&apos;m</h2>
           <h1 className="text-7xl font-bold mt-5 tracking-[3.5px] drop-shadow-[2px_2px_1px_rgba(120,120,120,0.8)]">
             Yunseok Hong
           </h1>
