@@ -72,7 +72,7 @@ export const projectList = [
     ],
     deployments: ["Serverless Deployments!", "CodeSandbox"],
     github: "https://github.com/doraemon0807/mini-twitter-clone",
-    link: "https://4qouu5-3000.csb.app/",
+    link: "https://codesandbox.io/p/github/doraemon0807/mini-twitter-clone/",
   },
   {
     id: "project4",
