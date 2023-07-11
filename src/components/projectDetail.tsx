@@ -1,7 +1,9 @@
 import ProjectDetailBig from "@/components/projectDetailBig";
 import ProjectDetailSmall from "@/components/projectDetailSmall";
+import { mqState } from "@/lib/atom";
 import { projectList } from "@/lib/projectList";
 import { useEffect, useState } from "react";
+import { useRecoilValue } from "recoil";
 
 interface ProjectDetailProps {
   id: string;
@@ -26,24 +28,11 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
     };
   }, [selectedProject?.images.length]);
 
-  const [lg, setLg] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
-
-  useEffect(() => {
-    window.addEventListener("resize", () => setWindowSize(window.innerWidth));
-  }, []);
-
-  useEffect(() => {
-    if (windowSize >= 1023) {
-      setLg(true);
-    } else {
-      setLg(false);
-    }
-  }, [windowSize]);
+  const screenSize = useRecoilValue(mqState);
 
   return (
     <>
-      {lg ? (
+      {screenSize == "lg" || screenSize == "xl" ? (
         <ProjectDetailBig id={id} counter={counter} project={selectedProject} />
       ) : (
         <ProjectDetailSmall
