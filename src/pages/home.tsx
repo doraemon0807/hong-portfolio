@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 
 export default function Home({ isInView }: BoxProps) {
   const [lg, setLg] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [windowSize, setWindowSize] = useState(0);
 
   useEffect(() => {
+    setWindowSize(window.innerWidth);
     window.addEventListener("resize", () => setWindowSize(window.innerWidth));
   }, []);
 

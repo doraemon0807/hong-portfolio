@@ -25,7 +25,7 @@ export default function ProjectDetail({ id }: ProjectDetailProps) {
     return () => {
       clearInterval(id);
     };
-  }, []);
+  }, [selectedProject?.images.length]);
 
   const [lg, setLg] = useState(false);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
