@@ -13,8 +13,8 @@ export default function About({ isInView }: BoxProps) {
       id="aboutBox"
       className="w-full min-h-screen h-full xl:px-24 select-none"
     >
-      <div className="w-full h-full flex justify-center items-center max-w-[1200px] mx-auto">
-        <div className="w-full -xl:h-full xl:grid xl:grid-cols-2 xl:gap-20 -xl:flex -xl:flex-col -xl:space-y-20 -xl:items-center">
+      <div className="w-full h-full min-h-screen flex justify-center items-center max-w-[1200px] mx-auto">
+        <div className="w-full -md:pt-20 pb-20 -xl:h-full xl:grid xl:grid-cols-2 xl:gap-20 -xl:flex -xl:flex-col -xl:space-y-20 -xl:items-center">
           {/* Typewriter */}
           <div className="flex flex-col w-full -xl:items-center">
             <h1
@@ -86,7 +86,6 @@ export default function About({ isInView }: BoxProps) {
             </div>
           </div>
           {/* Timeline */}
-
           {screenSize == "xs" ? (
             <div
               className={cls(
