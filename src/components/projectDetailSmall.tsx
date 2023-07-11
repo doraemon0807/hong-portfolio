@@ -22,13 +22,21 @@ export default function ProjectDetailSmall({
       id={"projectDetail"}
       layoutId={id}
       className={cls(
-        "z-50 w-4/5 h-3/4 space-y-5 bg-dark border-2 overflow-y-auto grid grid-rows-[12fr_1fr_12fr] border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-12 bottom-0 m-auto rounded-md p-5",
+        "z-50 w-4/5 h-3/4 space-y-5 bg-dark border-2 overflow-y-auto grid -sm:grid-rows-[14fr_1fr_20fr] grid-rows-[12fr_1fr_12fr] border-gray-700/50 shadow-md shadow-gray-700 fixed left-0 right-0 top-12 bottom-0 m-auto rounded-md p-5",
         className ? className : ""
       )}
     >
       {/* image */}
       <div className="relative flex justify-center items-center">
         {project?.images.map((image, idx) => (
+          // <div
+          //   style={{ backgroundImage: `url('/projects/${image}')` }}
+          //   key={image}
+          //   className={cls(
+          //     `rounded-sm absolute top-0 min-h-[337px] max-w-[540px] bg-fit bg-cover bg-center w-full flex justify-center items-center transition-all duration-1000`,
+          //     counter - 1 === idx ? "opacity-1" : "opacity-0"
+          //   )}
+          // ></div>
           <Image
             alt=""
             src={`/projects/${image}`}
@@ -37,7 +45,7 @@ export default function ProjectDetailSmall({
             height={1000}
             quality={100}
             className={cls(
-              "rounded-sm absolute top-0 min-h-[337px] max-w-[540px] w-full aspect-[8/5] flex justify-center items-center transition-all duration-1000",
+              "rounded-sm absolute top-0 bottom-0 my-auto sm:min-h-[337px] max-w-[540px] w-full aspect-[8/5] flex justify-center items-center transition-all duration-1000",
               counter - 1 === idx ? "opacity-1" : "opacity-0"
             )}
           ></Image>

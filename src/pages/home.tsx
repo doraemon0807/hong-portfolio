@@ -13,7 +13,7 @@ export default function Home({ isInView }: BoxProps) {
       id="homeBox"
       className="w-full h-screen select-none relative flex justify-center items-center"
     >
-      <div id="homeAnchor" className="absolute mt-40"></div>
+      <div id="homeAnchor" className="absolute top-10"></div>
       <div className="w-full h-full grid relative xl:grid-cols-2 mx-auto items-center max-w-[1400px]">
         {/* TextArea */}
         <div

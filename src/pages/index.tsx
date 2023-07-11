@@ -31,6 +31,7 @@ function Section({ children }: SectionProps) {
   const setScreenSize = useSetRecoilState(mqState);
 
   useEffect(() => {
+    setWindowSize(window.innerWidth);
     window.addEventListener("resize", () => setWindowSize(window.innerWidth));
   }, []);
 
@@ -48,6 +49,8 @@ function Section({ children }: SectionProps) {
       case windowSize >= 639:
         setScreenSize("sm");
         break;
+      default:
+        setScreenSize("xs");
     }
   }, [windowSize]);
 
