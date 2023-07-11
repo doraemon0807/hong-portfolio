@@ -11,9 +11,9 @@ export const projectList = [
     ],
     coverImage: "portfolio_cover.png",
     images: ["portfolio_1.png", "portfolio_2.png", "portfolio_3.png"],
-    deployments: ["github"],
+    deployments: ["Vercel"],
     github: "https://github.com/doraemon0807/hong-portfolio",
-    link: "",
+    link: "https://hong-portfolio.vercel.app/",
   },
   {
     id: "project2",
