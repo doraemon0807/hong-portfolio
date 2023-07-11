@@ -33,11 +33,14 @@ export default function Home({ isInView }: BoxProps) {
               <li className="animate-swapWordAnimation opacity-0 tracking-[2px] lg-1 absolute left-0">
                 Fullstack
               </li>
-              <li className="animate-swapWordAnimation opacity-0 absolute tracking-[2px] left-0 lg-1 animation-delay-3000">
+              <li className="animate-swapWordAnimation opacity-0 tracking-[2px] lg-1 absolute left-0 animation-delay-3000">
                 Frontend
               </li>
               <li className="animate-swapWordAnimation opacity-0 tracking-[3px] lg-1 absolute left-0 animation-delay-6000">
                 Backend
+              </li>
+              <li className="animate-swapWordAnimation opacity-0 tracking-[2px] lg-1 absolute left-0 animation-delay-9000">
+                Software
               </li>
             </ul>
             <div className=""> Developer Wannabe</div>
