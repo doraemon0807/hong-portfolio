@@ -6,3 +6,8 @@ export const navLocationState = atom({
   key: "navLocation",
   default: "homeAnchor",
 });
+
+export const mqState = atom({
+  key: "mq",
+  default: "",
+});

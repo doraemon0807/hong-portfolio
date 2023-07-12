@@ -10,10 +10,15 @@ export const projectList = [
       { name: "Framer Motion", image: "motion.webp" },
     ],
     coverImage: "portfolio_cover.png",
-    images: ["portfolio_1.png", "portfolio_2.png", "portfolio_3.png"],
-    deployments: ["github"],
+    images: [
+      "portfolio_1.png",
+      "portfolio_2.png",
+      "portfolio_3.png",
+      "portfolio_4.png",
+    ],
+    deployments: ["Vercel"],
     github: "https://github.com/doraemon0807/hong-portfolio",
-    link: "",
+    link: "https://hong-portfolio.vercel.app/",
   },
   {
     id: "project2",
@@ -72,7 +77,7 @@ export const projectList = [
     ],
     deployments: ["Serverless Deployments!", "CodeSandbox"],
     github: "https://github.com/doraemon0807/mini-twitter-clone",
-    link: "https://4qouu5-3000.csb.app/",
+    link: "https://codesandbox.io/p/github/doraemon0807/mini-twitter-clone/",
   },
   {
     id: "project4",

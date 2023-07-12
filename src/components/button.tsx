@@ -10,7 +10,7 @@ export default function Button({ text, link }: ButtonProps) {
     <Link
       href={link}
       target="_blank"
-      className="px-8 py-3 rounded-sm bg-gray-700 text-white shadow-sm hover:bg-gray-200 hover:text-dark uppercase text-xs tracking-[4px] transition-colors"
+      className="px-6 py-3 flex justify-center text-center items-center rounded-sm bg-gray-700 text-white shadow-sm hover:bg-gray-200 hover:text-dark uppercase text-xs tracking-[4px] transition-colors"
     >
       {text}
     </Link>

@@ -11,7 +11,7 @@ module.exports = {
         dark: "#0e0e0e",
       },
       animation: {
-        swapWordAnimation: "swapWords 9s ease-in-out infinite",
+        swapWordAnimation: "swapWords 12s ease-in-out infinite",
       },
       fontFamily: {
         Roboto: ["Roboto"],
