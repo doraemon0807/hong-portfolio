@@ -57,7 +57,6 @@ export default function Projects({ isInView }: BoxProps) {
     <div id="projectsBox" className="w-full min-h-screen py-20 select-none">
       <div className="flex flex-col items-center relative mb-20">
         <h1
-          id="projectsAnchor"
           className={cls(
             "title my-24 transition-all duration-1000",
             isInView ? "opacity-1" : "opacity-0 translate-y-12"
@@ -65,6 +64,7 @@ export default function Projects({ isInView }: BoxProps) {
         >
           Projects
         </h1>
+        <div id="projectsAnchor"></div>
         <div
           className={cls(
             "grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-10 transition-all duration-1000 delay-300",

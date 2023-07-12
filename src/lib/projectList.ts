@@ -10,7 +10,12 @@ export const projectList = [
       { name: "Framer Motion", image: "motion.webp" },
     ],
     coverImage: "portfolio_cover.png",
-    images: ["portfolio_1.png", "portfolio_2.png", "portfolio_3.png"],
+    images: [
+      "portfolio_1.png",
+      "portfolio_2.png",
+      "portfolio_3.png",
+      "portfolio_4.png",
+    ],
     deployments: ["Vercel"],
     github: "https://github.com/doraemon0807/hong-portfolio",
     link: "https://hong-portfolio.vercel.app/",

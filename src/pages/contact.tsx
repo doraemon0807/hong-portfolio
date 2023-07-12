@@ -1,18 +1,23 @@
 import Button from "@/components/button";
 import { cls } from "@/lib/utils";
 import { BoxProps } from "@/pages";
+import Image from "next/image";
 
 export default function Contact({ isInView }: BoxProps) {
   return (
     <div id="contactBox" className="w-full h-screen px-20 flex justify-center">
       <div className="w-full h-full flex justify-center items-center min-w-[800px] max-w-[1200px] mx-auto">
         <div className="w-full h-4/5 lg:grid lg:grid-cols-2 -lg:flex -lg:justify-center gap-16">
-          <div
+          <Image
+            src="/hong_picture.jpg"
+            alt=""
+            width={1000}
+            height={1000}
             className={cls(
-              "w-full aspect-[3/4] min-w-[450px] bg-red-900 mt-10 transition-all duration-1000 delay-100 -lg:hidden",
+              "w-full rounded-md aspect-[3/4] min-w-[450px] mt-10 transition-all duration-1000 delay-100 -lg:hidden",
               isInView ? "opacity-1" : "opacity-0 translate-y-12"
             )}
-          ></div>
+          ></Image>
           <div className="w-full h-full max-w-[600px] flex flex-col lg:items-end -lg:items-center justify-evenly">
             <h1
               id="contactAnchor"
