@@ -82,6 +82,8 @@ export default function Home({ isInView }: BoxProps) {
               "Javascript",
               "Python",
               "Flask",
+              "PlanetScale",
+              "VBA",
             ]}
           </TagCloud>
         </div>
