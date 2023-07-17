@@ -75,7 +75,7 @@ export const projectList = [
       "twitter_4.png",
       "twitter_5.png",
     ],
-    deployments: ["Serverless Deployments!", "CodeSandbox"],
+    deployments: ["CodeSandbox"],
     github: "https://github.com/doraemon0807/mini-twitter-clone",
     link: "https://codesandbox.io/p/github/doraemon0807/mini-twitter-clone/",
   },

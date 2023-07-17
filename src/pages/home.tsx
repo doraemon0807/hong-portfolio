@@ -43,7 +43,7 @@ export default function Home({ isInView }: BoxProps) {
           )}
         >
           <TagCloud
-            className="text-2xl -xl:text-5xl select-none flex items-center justify-center"
+            className="text-3xl -xl:text-5xl select-none flex items-center justify-center"
             options={(w: Window & typeof globalThis): TagCloudOptions => ({
               radius:
                 Math.min(
@@ -56,16 +56,16 @@ export default function Home({ isInView }: BoxProps) {
             })}
           >
             {[
-              "HTML",
-              "CSS",
-              "NodeJS",
-              "Prisma",
-              "Typescript",
-              "MongoDB",
               "React",
+              "Typescript",
+              "NodeJS",
+              "MongoDB",
               "NextJS",
               "TailwindCSS",
               "Javascript",
+              "HTML",
+              "CSS",
+              "Prisma",
               "PlanetScale",
             ]}
           </TagCloud>
