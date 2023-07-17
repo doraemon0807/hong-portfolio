@@ -56,7 +56,7 @@ export const projectList = [
     id: "project3",
     title: "Mini Twitter - Serverless SNS Platform",
     features: [
-      "User Authentication",
+      "Passwordless User Authentication",
       "User Profile",
       "Post, Edit, Comment Tweets",
       "Like & Unlike",

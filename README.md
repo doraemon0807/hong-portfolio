@@ -1,4 +1,4 @@
 Yun's Portfolio
 
-- fix/deploy twitter
+- fix twitter token alert
 - elaborate github/linkedin
