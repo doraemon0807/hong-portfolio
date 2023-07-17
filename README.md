@@ -1,3 +1,4 @@
 Yun's Portfolio
 
-- contact page photo
+- fix/deploy twitter
+- elaborate github/linkedin
