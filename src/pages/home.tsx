@@ -26,24 +26,13 @@ export default function Home({ isInView }: BoxProps) {
           <h1 className="text-7xl -sm:text-center font-bold mt-5 tracking-[3.5px] drop-shadow-[2px_2px_1px_rgba(120,120,120,0.8)]">
             Yunseok Hong
           </h1>
-          <div className="relative text-2xl -sm:justify-center -sm:text-lg tracking-[2px] font-medium mt-10 flex">
-            <div className="">A </div>
-            <ul className="relative font-semibold flex items-center">
-              <span className="text-transparent">Fullstack</span>
-              <li className="animate-swapWordAnimation opacity-0 tracking-[2px] lg-1 absolute left-0">
-                Fullstack
-              </li>
-              <li className="animate-swapWordAnimation opacity-0 tracking-[2px] lg-1 absolute left-0 animation-delay-3000">
-                Frontend
-              </li>
-              <li className="animate-swapWordAnimation opacity-0 tracking-[3px] lg-1 absolute left-0 animation-delay-6000">
-                Backend
-              </li>
-              <li className="animate-swapWordAnimation opacity-0 tracking-[2px] lg-1 absolute left-0 animation-delay-9000">
-                Software
-              </li>
-            </ul>
-            <div className=""> Developer Wannabe</div>
+          <div className="relative text-lg -sm:justify-center -sm:text-center -sm:text-lg tracking-[2px] font-medium mt-10 flex -xl:w-1/2 -lg:w-full">
+            <div className="">
+              A <span className="lg-1 font-semibold">Fullstack Developer</span>{" "}
+              specialized in{" "}
+              <span className="lg-1 font-semibold">React & Typescript</span>,
+              who enjoys building interactive and user-friendly website.
+            </div>
           </div>
         </div>
         {/* TagCloud */}
@@ -54,7 +43,7 @@ export default function Home({ isInView }: BoxProps) {
           )}
         >
           <TagCloud
-            className="text-2xl -xl:text-5xl select-none flex items-center justify-center"
+            className="text-3xl -xl:text-5xl select-none flex items-center justify-center"
             options={(w: Window & typeof globalThis): TagCloudOptions => ({
               radius:
                 Math.min(
@@ -67,21 +56,17 @@ export default function Home({ isInView }: BoxProps) {
             })}
           >
             {[
-              "HTML",
-              "CSS",
-              "NodeJS",
-              "Express",
-              "SCSS",
-              "Prisma",
-              "Typescript",
-              "RestAPI",
-              "MongoDB",
               "React",
+              "Typescript",
+              "NodeJS",
+              "MongoDB",
               "NextJS",
               "TailwindCSS",
+              "HTML",
+              "CSS",
               "Javascript",
-              "Python",
-              "Flask",
+              "Prisma",
+              "PlanetScale",
             ]}
           </TagCloud>
         </div>

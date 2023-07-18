@@ -1,3 +1,4 @@
 Yun's Portfolio
 
-- contact page photo
+- fix twitter token alert
+- elaborate github/linkedin

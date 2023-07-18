@@ -56,7 +56,7 @@ export const projectList = [
     id: "project3",
     title: "Mini Twitter - Serverless SNS Platform",
     features: [
-      "User Authentication",
+      "Passwordless User Authentication",
       "User Profile",
       "Post, Edit, Comment Tweets",
       "Like & Unlike",
@@ -75,7 +75,7 @@ export const projectList = [
       "twitter_4.png",
       "twitter_5.png",
     ],
-    deployments: ["Serverless Deployments!", "CodeSandbox"],
+    deployments: ["CodeSandbox"],
     github: "https://github.com/doraemon0807/mini-twitter-clone",
     link: "https://codesandbox.io/p/github/doraemon0807/mini-twitter-clone/",
   },
