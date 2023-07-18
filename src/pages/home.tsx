@@ -62,9 +62,9 @@ export default function Home({ isInView }: BoxProps) {
               "MongoDB",
               "NextJS",
               "TailwindCSS",
-              "Javascript",
               "HTML",
               "CSS",
+              "Javascript",
               "Prisma",
               "PlanetScale",
             ]}
