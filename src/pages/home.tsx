@@ -28,7 +28,8 @@ export default function Home({ isInView }: BoxProps) {
           </h1>
           <div className="relative text-lg -sm:justify-center -sm:text-center -sm:text-lg tracking-[2px] font-medium mt-10 flex -xl:w-1/2 -lg:w-full">
             <div className="">
-              A <span className="lg-1 font-semibold">Fullstack Developer</span>{" "}
+              A self-taught{" "}
+              <span className="lg-1 font-semibold">Fullstack Developer</span>{" "}
               specialized in{" "}
               <span className="lg-1 font-semibold">React & Typescript</span>,
               who enjoys building interactive and user-friendly website.
