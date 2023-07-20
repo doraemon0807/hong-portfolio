@@ -66,6 +66,7 @@ export const projectList = [
       { name: "Typescript", image: "typescript.webp" },
       { name: "TailwindCSS", image: "tailwindcss.webp" },
       { name: "Prisma", image: "prisma.webp" },
+      { name: "PlanetScale", image: "planetscale.webp" },
     ],
     coverImage: "twitter_cover.png",
     images: [
