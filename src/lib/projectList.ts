@@ -1,5 +1,30 @@
 export const projectList = [
   {
+    id: "project7",
+    title: "Outstagram - Photo Sharing SNS Platform (WIP)",
+    features: [
+      "iOS/Android App + PC Website",
+      "User Authentication",
+      "Add & Edit Comments",
+      "Like & Unlike",
+      "Upload, Search Photos",
+      "Direct Messages & Group Chat",
+      "Light & Dark Mode",
+    ],
+    packages: [
+      { name: "ReactJS", image: "react.webp" },
+      { name: "Typescript", image: "typescript.webp" },
+      { name: "GraphQL", image: "graphql.webp" },
+      { name: "React Native", image: "reactnative.webp" },
+      { name: "Prisma", image: "prisma.webp" },
+    ],
+    coverImage: "outstagram_cover.png",
+    images: ["outstagram_1.png", "outstagram_2.png"],
+    deployments: ["TBD"],
+    github: "https://github.com/doraemon0807/instaclone-web",
+    link: "https://hong-portfolio.vercel.app/",
+  },
+  {
     id: "project1",
     title: "My Portfolio - Fully Responsive Webpage",
     features: ["Fully Responsive", "Scroll Events"],
