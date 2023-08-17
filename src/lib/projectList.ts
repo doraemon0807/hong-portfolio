@@ -3,12 +3,12 @@ export const projectList = [
     id: "project7",
     title: "Outstagram - Photo Sharing SNS Platform (WIP)",
     features: [
-      "iOS/Android App + PC Website",
+      "iOS/Android/PC Website",
       "User Authentication",
       "Add & Edit Comments",
       "Like & Unlike",
       "Upload, Search Photos",
-      "Direct Messages & Group Chat",
+      "DM & Group Chat",
       "Light & Dark Mode",
     ],
     packages: [
@@ -19,7 +19,7 @@ export const projectList = [
       { name: "Prisma", image: "prisma.webp" },
     ],
     coverImage: "outstagram_cover.png",
-    images: ["outstagram_1.png", "outstagram_2.png"],
+    images: ["outstagram_1.png", "outstagram_2.png", "outstagram_3.png"],
     deployments: ["TBD"],
     github: "https://github.com/doraemon0807/instaclone-web",
     link: "https://hong-portfolio.vercel.app/",
