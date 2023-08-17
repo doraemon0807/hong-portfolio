@@ -22,7 +22,7 @@ export const projectList = [
     images: ["outstagram_1.png", "outstagram_2.png", "outstagram_3.png"],
     deployments: ["TBD"],
     github: "https://github.com/doraemon0807/instaclone-web",
-    link: "https://hong-portfolio.vercel.app/",
+    link: "#",
   },
   {
     id: "project1",
