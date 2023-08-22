@@ -22,7 +22,8 @@
   background: linear-gradient(to right, #ff2f2b, #31b0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: linear-gradient(to right, #ff2f2b, #31b0ff);
+  color: transparent;
+  /* text-shadow: 1px 1px 1px white; */
 }
 
 .lg-2 {
