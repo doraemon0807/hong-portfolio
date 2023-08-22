@@ -19,21 +19,24 @@
 }
 
 .lg-1 {
-  background: linear-gradient(to right, #ff7c7a, #66c4ff);
+  background: linear-gradient(to right, #ff2f2b, #31b0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: linear-gradient(to right, #ff2f2b, #31b0ff);
 }
 
 .lg-2 {
-  background: linear-gradient(to right, #ff7c7a 0%, #66c4ff 20%);
+  background: linear-gradient(to right, #ff2f2b 0%, #31b0ff 20%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
+  color: linear-gradient(to right, #ff2f2b, #31b0ff);
 }
 
 .Typewriter__wrapper {
-  background: linear-gradient(to right, #ff7c7a, #66c4ff);
+  background: linear-gradient(to right, #ff2f2b, #31b0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
+  color: linear-gradient(to right, #ff2f2b, #31b0ff);
 }
