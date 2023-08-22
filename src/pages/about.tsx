@@ -71,14 +71,14 @@ export default function About({ isInView }: BoxProps) {
                   {iconList.map((icon) => (
                     <div
                       key={icon.name}
-                      className="max-w-[60px] min-w-[30px] p-[2px] aspect-square overflow-hidden bg-white rounded-full flex justify-center items-center"
+                      className="max-w-[70px] min-w-[30px] p-[2px] aspect-square overflow-hidden bg-white rounded-full flex justify-center items-center"
                     >
                       <Image
                         src={`/icons/${icon.image}`}
                         alt=""
                         key={icon.name}
-                        width={50}
-                        height={50}
+                        width={60}
+                        height={60}
                         data-tooltip-id={icon.name}
                         data-tooltip-content={icon.name}
                         className="cursor-pointer"
