@@ -52,7 +52,7 @@ function Section({ children }: SectionProps) {
       default:
         setScreenSize("xs");
     }
-  }, [windowSize]);
+  }, [windowSize, setScreenSize]);
 
   return (
     <div ref={ref} className="">

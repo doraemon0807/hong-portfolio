@@ -1,9 +1,11 @@
 import Timeline from "@/components/timeline";
-import Typewriter from "typewriter-effect";
 import { BoxProps } from "@/pages";
 import { cls } from "@/lib/utils";
 import { mqState } from "@/lib/atom";
 import { useRecoilValue } from "recoil";
+import { iconList } from "@/lib/iconList";
+import Image from "next/image";
+import { Tooltip } from "react-tooltip";
 
 export default function About({ isInView }: BoxProps) {
   const screenSize = useRecoilValue(mqState);
@@ -14,13 +16,13 @@ export default function About({ isInView }: BoxProps) {
       className="w-full min-h-screen h-full xl:px-24 select-none"
     >
       <div className="w-full h-full min-h-screen flex justify-center items-center max-w-[1200px] mx-auto">
-        <div className="w-full -md:pt-20 pb-20 -xl:h-full xl:grid xl:grid-cols-2 xl:gap-20 -xl:flex -xl:flex-col -xl:space-y-20 -xl:items-center">
-          {/* Typewriter */}
+        <div className="w-full xl:mt-20 -md:pt-20 pb-20 -xl:h-full xl:grid xl:grid-cols-2 xl:gap-20 -xl:flex -xl:flex-col -xl:space-y-20 -xl:items-center">
+          {/* Introduction */}
           <div className="flex flex-col w-full -xl:items-center">
             <h1
               id="aboutAnchor"
               className={cls(
-                "title transition-all duration-1000 xl:mb-40 -xl:mb-20 -xl:mt-40",
+                "title transition-all duration-1000 xl:mb-10 -xl:mb-20 -xl:mt-40",
                 isInView ? "opacity-1" : "opacity-0 translate-y-12"
               )}
             >
@@ -32,56 +34,59 @@ export default function About({ isInView }: BoxProps) {
                 isInView ? "opacity-1" : "opacity-0 translate-y-12"
               )}
             >
-              <div className="flex">
-                <span>I</span>
-                <Typewriter
-                  options={{
-                    strings: [
-                      " was born in Seoul",
-                      " currently live in Montreal",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
+              <div className="text-sm space-y-5 -xl:text-center">
+                <p>
+                  Hey there! I am a{" "}
+                  <span className="lg-1-blue font-semibold">
+                    fullstack developer
+                  </span>{" "}
+                  who is absolutely crazy about video games.
+                </p>
+                <p>
+                  My playground includes{" "}
+                  <span className="lg-1-red font-semibold">ReactJS</span>,{" "}
+                  <span className="lg-1-red font-semibold">NodeJS</span>, and{" "}
+                  <span className="lg-1-red font-semibold">Typescript</span>,
+                  and I get a kick out of turning ideas into software and
+                  websites that come to life.
+                </p>
+                <p>
+                  So if you are up for a chat about{" "}
+                  <span className="lg-1-blue font-semibold">code</span>,{" "}
+                  <span className="lg-1-blue font-semibold">gaming</span>, or{" "}
+                  <span className="lg-1-blue font-semibold">
+                    turning ideas into reality
+                  </span>
+                  ,{" "}
+                  <span className="underline-offset-4 underline block">
+                    I am your person!
+                  </span>
+                </p>
               </div>
-              <div className="flex">
-                <span>I am fluent in</span>
-                <Typewriter
-                  options={{
-                    strings: [" English", " French", " Korean"],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </div>
-              <div className="flex">
-                <span>I excel at</span>
-                <Typewriter
-                  options={{
-                    strings: [
-                      " problem solving",
-                      " leadership",
-                      " task management",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </div>
-              <div className="flex">
-                <span>I love</span>
-                <Typewriter
-                  options={{
-                    strings: [
-                      " video games",
-                      " cats and dogs",
-                      " playing guitar",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
+              <div className="flex flex-col justify-center -xl:items-center">
+                <h2 className="mb-6 text-xl font-medium uppercase -xl:mt-10">
+                  My Skillsets
+                </h2>
+                <div className="grid gap-6 xl:grid-cols-5 lg:grid-cols-8 md:grid-cols-6 sm:grid-cols-5 -sm:grid-cols-4">
+                  {iconList.map((icon) => (
+                    <div
+                      key={icon.name}
+                      className="max-w-[70px] min-w-[30px] p-[2px] aspect-square overflow-hidden bg-white rounded-full flex justify-center items-center"
+                    >
+                      <Image
+                        src={`/icons/${icon.image}`}
+                        alt=""
+                        key={icon.name}
+                        width={60}
+                        height={60}
+                        data-tooltip-id={icon.name}
+                        data-tooltip-content={icon.name}
+                        className="cursor-pointer"
+                      />
+                      <Tooltip id={icon.name} className="tracking-wider" />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

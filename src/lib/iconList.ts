@@ -1,0 +1,17 @@
+export const iconList = [
+  { name: "ReactJS", image: "react.webp" },
+  { name: "Javascript", image: "js.webp" },
+  { name: "Typescript", image: "typescript.webp" },
+  { name: "NodeJS", image: "nodejs.webp" },
+  { name: "NextJS", image: "next.webp" },
+  { name: "GraphQL", image: "graphql.webp" },
+  { name: "React Native", image: "reactnative.webp" },
+  { name: "MongoDB", image: "mongo.webp" },
+  { name: "TailwindCSS", image: "tailwindcss.webp" },
+  { name: "Framer Motion", image: "motion.webp" },
+  { name: "ES6", image: "es6.webp" },
+  { name: "Pug", image: "pug.webp" },
+  { name: "Sass", image: "sass.webp" },
+  { name: "Prisma", image: "prisma.webp" },
+  { name: "PlanetScale", image: "planetscale.webp" },
+];
