@@ -36,28 +36,28 @@ export default function About({ isInView }: BoxProps) {
             >
               <div className="text-sm space-y-5 -xl:text-center">
                 <p>
-                  Hey there! I'm a{" "}
+                  Hey there! I'm a 
                   <span className="lg-1-blue font-semibold">
                     fullstack developer
-                  </span>{" "}
-                  who's absolutely crazy about video games.
+                  </span>
+                   who's absolutely crazy about video games.
                 </p>
                 <p>
-                  My playground includes{" "}
-                  <span className="lg-1-red font-semibold">ReactJS</span>,{" "}
-                  <span className="lg-1-red font-semibold">NodeJS</span>, and{" "}
+                  My playground includes 
+                  <span className="lg-1-red font-semibold">ReactJS</span>, 
+                  <span className="lg-1-red font-semibold">NodeJS</span>, and 
                   <span className="lg-1-red font-semibold">Typescript</span>,
                   and I get a kick out of turning ideas into software and
                   websites that come to life.
                 </p>
                 <p>
-                  So if you're up for a chat about{" "}
-                  <span className="lg-1-blue font-semibold">code</span>,{" "}
-                  <span className="lg-1-blue font-semibold">gaming</span>, or{" "}
+                  So if you're up for a chat about 
+                  <span className="lg-1-blue font-semibold">code</span>, 
+                  <span className="lg-1-blue font-semibold">gaming</span>, or 
                   <span className="lg-1-blue font-semibold">
                     turning ideas into reality
                   </span>
-                  ,{" "}
+                  , 
                   <span className="underline-offset-4 underline block">
                     I'm your person!
                   </span>
