@@ -1,5 +1,4 @@
 import Timeline from "@/components/timeline";
-import Typewriter from "typewriter-effect";
 import { BoxProps } from "@/pages";
 import { cls } from "@/lib/utils";
 import { mqState } from "@/lib/atom";
@@ -17,8 +16,8 @@ export default function About({ isInView }: BoxProps) {
       className="w-full min-h-screen h-full xl:px-24 select-none"
     >
       <div className="w-full h-full min-h-screen flex justify-center items-center max-w-[1200px] mx-auto">
-        <div className="w-full -md:pt-20 pb-20 -xl:h-full xl:grid xl:grid-cols-2 xl:gap-20 -xl:flex -xl:flex-col -xl:space-y-20 -xl:items-center">
-          {/* Typewriter */}
+        <div className="w-full xl:mt-20 -md:pt-20 pb-20 -xl:h-full xl:grid xl:grid-cols-2 xl:gap-20 -xl:flex -xl:flex-col -xl:space-y-20 -xl:items-center">
+          {/* Introduction */}
           <div className="flex flex-col w-full -xl:items-center">
             <h1
               id="aboutAnchor"
