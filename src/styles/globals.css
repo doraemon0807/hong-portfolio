@@ -19,14 +19,9 @@
 }
 
 .lg-1 {
-  background: linear-gradient(to right, #ff2f2b, #31b0ff);
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
-  background-clip: text;
-  color: transparent;
-  /* color: #ff5a57;
-  text-shadow: 1px 1px 1px #00446e;
-  text-decoration: underline; */
+  background-image: linear-gradient(to right, #ff2f2b, #31b0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .lg-2 {
