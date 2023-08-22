@@ -67,7 +67,7 @@ export default function ProjectDetailBig({
         </div>
         <div className="flex flex-col h-full py-4 justify-evenly">
           <div className="">
-            <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
+            <h5 className="lg-1-red mb-2 tracking-[3px] uppercase text-sm">
               Feature
             </h5>
             <div className="flex flex-col">
@@ -77,13 +77,13 @@ export default function ProjectDetailBig({
             </div>
           </div>
           <div className="flex flex-col">
-            <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
+            <h5 className="lg-1-red mb-2 tracking-[3px] uppercase text-sm">
               Package
             </h5>
             <Packages project={project} />
           </div>
           <div>
-            <h5 className="lg-2 mb-2 tracking-[3px] uppercase text-sm">
+            <h5 className="lg-1-red mb-2 tracking-[3px] uppercase text-sm">
               Deployment
             </h5>
             {project?.deployments.map((deployment) => (

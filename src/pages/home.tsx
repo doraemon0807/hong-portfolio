@@ -29,10 +29,15 @@ export default function Home({ isInView }: BoxProps) {
           <div className="relative text-lg -sm:justify-center -sm:text-center -sm:text-lg tracking-[2px] font-medium mt-10 flex -xl:w-1/2 -lg:w-full">
             <div className="">
               A self-taught{" "}
-              <span className="lg-1 font-semibold">Fullstack Developer</span>{" "}
+              <span className="lg-1-blue font-semibold">
+                Fullstack Developer
+              </span>{" "}
               specialized in{" "}
-              <span className="lg-1 font-semibold">React & Typescript</span>,
-              who enjoys building interactive and user-friendly website.
+              <span className="lg-1-red font-semibold">React</span>,{" "}
+              <span className="lg-1-red font-semibold">Node.js</span>
+              {" & "}
+              <span className="lg-1-red font-semibold">Typescript</span>, who
+              enjoys building interactive and user-friendly website.
             </div>
           </div>
         </div>

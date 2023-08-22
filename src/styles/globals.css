@@ -18,13 +18,14 @@
   letter-spacing: 8px;
 }
 
-.lg-1 {
-  background-image: linear-gradient(to right, #ff2f2b, #31b0ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.lg-1-red {
+  color: #ff6788;
+}
+.lg-1-blue {
+  color: #7c90ff;
 }
 
-.lg-2 {
+/* .lg-2 {
   background: linear-gradient(to right, #ff2f2b 0%, #31b0ff 20%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -38,4 +39,4 @@
   -webkit-text-fill-color: transparent;
   font-weight: 600;
   color: linear-gradient(to right, #ff2f2b, #31b0ff);
-}
+} */
