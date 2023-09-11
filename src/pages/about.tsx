@@ -101,6 +101,11 @@ export default function About({ isInView }: BoxProps) {
               <div className="w-full h-full tracking-widest">
                 <ul className="h-full flex text-center flex-col items-center justify-between space-y-10">
                   <li>
+                    <h6 className="text-xs text-gray-400">2023-09 - Present</h6>
+                    <h3>Full Stack Web Engineer</h3>
+                    <h5 className="text-sm text-gray-300">Self-Employed</h5>
+                  </li>
+                  <li>
                     <h6 className="text-xs text-gray-400">2021-08 - Present</h6>
                     <h3>Localization QA Release Manager</h3>
                     <h5 className="text-sm text-gray-300">
@@ -142,27 +147,34 @@ export default function About({ isInView }: BoxProps) {
                 <div className="flex flex-col space-y-16 -translate-x-[9px]">
                   <Timeline
                     index={1}
+                    title="Full Stack Web Engineer"
+                    subtitle="Self-Employed"
+                    startTime="2023-09"
+                    endTime="Present"
+                  />
+                  <Timeline
+                    index={2}
                     title="Localization QA Release Manager"
                     subtitle="at Keywords Studios Montreal"
                     startTime="2021-08"
                     endTime="Present"
                   />
                   <Timeline
-                    index={2}
+                    index={3}
                     title="Localization QA Test Lead"
                     subtitle="at Keywords Studios Montreal"
                     startTime="2016-11"
                     endTime="2021-08"
                   />
                   <Timeline
-                    index={3}
+                    index={4}
                     title="Localization QA Korean Tester"
                     subtitle="at Keywords Studios Montreal"
                     startTime="2015-05"
                     endTime="2016-11"
                   />
                   <Timeline
-                    index={4}
+                    index={5}
                     title="Majored in Mechanical Engineering"
                     subtitle="at McGill University"
                     startTime="2010-09"

@@ -1,3 +1,4 @@
+import Button from "@/components/button";
 import { mqState } from "@/lib/atom";
 import { cls } from "@/lib/utils";
 import { BoxProps } from "@/pages";
@@ -39,6 +40,13 @@ export default function Home({ isInView }: BoxProps) {
               <span className="lg-1-red font-semibold">Typescript</span>, who
               enjoys building interactive and user-friendly website.
             </div>
+          </div>
+          <div className="flex flex-row space-x-6 mt-10 -sm:justify-center">
+            <Button text={"GitHub"} link={"https://github.com/doraemon0807"} />
+            <Button
+              text={"LinkedIn"}
+              link={"https://www.linkedin.com/in/yunseok-hong-9896a5158/"}
+            />
           </div>
         </div>
         {/* TagCloud */}

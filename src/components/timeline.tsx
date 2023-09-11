@@ -23,7 +23,7 @@ export default function Timeline({
 
   useEffect(() => {
     const id = setInterval(
-      () => setCounter((oldCount) => (oldCount >= 4 ? 1 : oldCount + 1)),
+      () => setCounter((oldCount) => (oldCount >= 5 ? 1 : oldCount + 1)),
       3000
     );
 
