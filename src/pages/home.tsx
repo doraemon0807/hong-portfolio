@@ -80,7 +80,7 @@ export default function Home({ isInView }: BoxProps) {
               "CSS",
               "Javascript",
               "Prisma",
-              "PlanetScale",
+              "GraphQL",
             ]}
           </TagCloud>
         </div>
