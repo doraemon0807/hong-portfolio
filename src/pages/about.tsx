@@ -101,9 +101,9 @@ export default function About({ isInView }: BoxProps) {
               <div className="w-full h-full tracking-widest">
                 <ul className="h-full flex text-center flex-col items-center justify-between space-y-10">
                   <li>
-                    <h6 className="text-xs text-gray-400">2023-09 - Present</h6>
-                    <h3>Full Stack Web Engineer</h3>
-                    <h5 className="text-sm text-gray-300">Self-Employed</h5>
+                    <h6 className="text-xs text-gray-400">2022-12 - Present</h6>
+                    <h3>Full Stack Developer</h3>
+                    <h5 className="text-sm text-gray-300">at Startup</h5>
                   </li>
                   <li>
                     <h6 className="text-xs text-gray-400">2021-08 - Present</h6>
@@ -147,9 +147,9 @@ export default function About({ isInView }: BoxProps) {
                 <div className="flex flex-col space-y-16 -translate-x-[9px]">
                   <Timeline
                     index={1}
-                    title="Full Stack Web Engineer"
-                    subtitle="Self-Employed"
-                    startTime="2023-09"
+                    title="Full Stack Developer"
+                    subtitle="at Startup"
+                    startTime="2022-12"
                     endTime="Present"
                   />
                   <Timeline
