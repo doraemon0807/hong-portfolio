@@ -38,7 +38,7 @@ export default function Contact({ isInView }: BoxProps) {
                 Reach out to me at:
               </h3>
               <h5 className="tracking-[3px] ">doraemon0807@hotmail.com</h5>
-              <h5 className="tracking-[3px] ">+1 514-467-8152</h5>
+              <h5 className="tracking-[3px] ">+1 672-971-8692</h5>
             </div>
             <div
               className={cls(
