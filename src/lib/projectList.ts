@@ -28,7 +28,7 @@ export const projectList = [
     id: "project7",
     title: "Calculator Application",
     features: [
-      "Simple Arithmetic Calculation",
+      "Simple Arithmetic Calculation App",
       "Basic Implementation of Grid and Flexbox",
     ],
     packages: [

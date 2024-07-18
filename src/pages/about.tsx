@@ -34,7 +34,7 @@ export default function About({ isInView }: BoxProps) {
                 isInView ? "opacity-1" : "opacity-0 translate-y-12"
               )}
             >
-              <div className="text-sm space-y-5 -xl:text-center">
+              <div className="text-md space-y-5 -xl:text-center">
                 <p>
                   Hey there! I am a{" "}
                   <span className="lg-1-blue font-semibold">
@@ -107,7 +107,7 @@ export default function About({ isInView }: BoxProps) {
                   </li>
                   <li>
                     <h6 className="text-xs text-gray-400">2021-08 - Present</h6>
-                    <h3>Localization QA Release Manager</h3>
+                    <h3>Localization Release Manager</h3>
                     <h5 className="text-sm text-gray-300">
                       at Keywords Studios Montreal
                     </h5>
@@ -154,7 +154,7 @@ export default function About({ isInView }: BoxProps) {
                   />
                   <Timeline
                     index={2}
-                    title="Localization QA Release Manager"
+                    title="Localization Release Manager"
                     subtitle="at Keywords Studios Montreal"
                     startTime="2021-08"
                     endTime="Present"
