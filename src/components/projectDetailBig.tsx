@@ -38,7 +38,7 @@ export default function ProjectDetailBig({
               height={1000}
               quality={100}
               className={cls(
-                "rounded-sm absolute w-full max-w-[850px] aspect-[8/5] flex justify-center items-center transition-all duration-1000",
+                "object-cover rounded-sm absolute w-full max-w-[850px] aspect-[8/5] flex justify-center items-center transition-all duration-1000",
                 counter - 1 === idx ? "opacity-1" : "opacity-0"
               )}
             ></Image>
